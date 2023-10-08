@@ -69,24 +69,32 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;  
 
-  programs.starship = {
-    enable = true;
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "Y0SH4";
-    userEmail = "yosa.agung13@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.rebase = true;
+  programs = {
+    starship = {
+      enable = true;
     };
+
+    tmux = {
+      enable = true;
+      clock24 = true;
+    };
+
+    git = {
+      enable = true;
+      userName = "Y0SH4";
+      userEmail = "yosa.agung13@gmail.com";
+      extraConfig = {
+        init.defaultBranch = "main";
+        pull.rebase = true;
+      };
+    };
+
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+    }; 
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-  }; 
 }
