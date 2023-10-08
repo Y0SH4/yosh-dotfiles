@@ -80,8 +80,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget 
   environment.systemPackages = with pkgs; [
-    (python310.withPackages(ps: with ps; [ requests ]))
+    (python311.withPackages(ps: with ps; [ requests pyquery ]))
     python311Packages.pip
+    python311Full
     python3
     wireplumber
     pipewire
