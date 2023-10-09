@@ -117,6 +117,11 @@
     libcanberra-gtk3
     blueman
     brightnessctl
+    sway-contrib.grimshot
+    xfce.thunar                               
+    gnome.gnome-calculator
+    wf-recorder
+    vlc
   ]; 
 
   # Some programs need SUID wrappers, can be configured further or are
