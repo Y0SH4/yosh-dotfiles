@@ -1,7 +1,7 @@
 # !/usr/bin/env bash
 
 swww init &
-swww img ~/Wallpaper/gruvbox-mountain-village.png &
+swww img ~/Pictures/wallpaper.png &
 nm-applet --indicator &
 waybar &
 dunst

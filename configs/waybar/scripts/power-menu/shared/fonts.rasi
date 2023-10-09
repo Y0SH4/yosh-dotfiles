@@ -1,0 +1,12 @@
+/**
+ *
+ * Author : Yosa Agung (1627)
+ * Github : @Y0SH4
+ * 
+ * Fonts
+ *
+ **/
+
+* {
+    font: "JetBrains Mono Nerd Font 10";
+}

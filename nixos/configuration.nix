@@ -11,13 +11,6 @@
       # inputs.home-manager.nixosModules.home-manager
     ];
 
-  # home-manager = {
-  #   extraSpecialArgs = {inherit inputs;};
-  #   users = {
-  #     tuxinity = import ../home-manager/home.nix;
-  #   };
-  # };
-
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/nvme0n1";
@@ -64,9 +57,10 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tuxinity = {
-    isNormalUser = true;
+    isNormalUser = true; 
     description = "tuxinity";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
      kitty
      brave
@@ -76,6 +70,14 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+   #Waybar wlr/Workspaces
+    nixpkgs.overlays = [
+    (self: super: {
+      waybar = super.waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      });
+    })
+    ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget 
@@ -84,13 +86,14 @@
     python311Packages.pip
     python311Full
     python3
+    cava
     wireplumber
     pipewire
     wget
     rofi-wayland
     home-manager
     waybar 
-    sway
+    viewnior
     eww
     swww
     dunst
@@ -107,6 +110,12 @@
     qt6.qtbase
     networkmanagerapplet
     libva
+    playerctl
+    pamixer
+    jellyfin-ffmpeg
+    libcanberra-gtk3
+    blueman
+    brightnessctl
   ]; 
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -164,7 +173,7 @@
         nix-zsh-completions
       ];
     };
-  };
+  }; 
 
   programs.hyprland = {
     enable = true;

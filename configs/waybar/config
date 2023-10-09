@@ -1,138 +1,118 @@
 {
-    "layer": "top",
-    "position": "top",
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "height": 50,
-    "modules-left": ["clock","custom/weather",],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "height": 20, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "modules-left": ["custom/launcher", "temperature", "cpu", "memory", "custom/weather", "wlr/workspaces"],
+    "modules-center": ["mpris"],
+    "modules-right": [ "network", "pulseaudio", "clock", "custom/spotify", "custom/wallpaper","tray","custom/power-menu"],
+    "wlr/workspaces": {
+      "format": "{icon}",
+      "all-outputs": true,
+      "on-click": "activate",
+      "format-icons": {
+        "active": " 󰮯",
+        "default": "󰌽",
+      }
+    },
     "hyprland/window": {
-        "format": "{}"
-    },
-
-   // "wlr/workspaces": {
-   //     "disable-scroll": true,
-   //     "all-outputs": true,
-   //     "on-click": "activate",
-   //     "persistent_workspaces": {
-   //         "1": [],
-   //         "2": [],
-   //         "3": [],
-   //         "4": [],
-   //         "5": [],
-   //         "6": [],
-   //         "7": [],
-   //         "8": [],
-   //         "9": [],
-   //         "10": []
-   //     }
-   // },
-    
-    "custom/power_profile":{
-        //shows the current power profile and switches to next on click
-        "exec": "asusctl profile -p | sed s:'Active profile is'::",
-        "interval": 30,
-        "format": "󰈐{}", 
-        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
-        "signal": 8
-    },
-
-   "custom/weather" : {
-        //shows the current weather and forecast
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/weather.py",
-        "return-type" : "json"
+      "format": "{}"
+        
     },
 
     "tray": {
-        "icon-size": 18,
-        "spacing": 10
+      "spacing": 10
     },
 
     "clock": {
-        "format": "{: %I:%M %p   %a, %b %e}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "{:%H:%M}",
+        "format-alt": "{:%b %d %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
 
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
-        "min-length": 6
+    "cpu": {
+      "interval": 10,
+      "format": "  {}%",
+      "max-length": 10,
+      "on-click": "",
     },
 
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "memory": {
+      "interval": 30,
+      "format": " {}%",
+      "format-alt":" {used:0.1f}GB",
+      "max-length": 10,
+    },
+      
+    "network": {
+        /* "format-wifi": "直", */
+        "format-wifi": "<small>{bandwidthUpBytes}↑ {bandwidthDownBytes}↓</small> {icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
+        "tooltip-format": "{essid}",
+        "interval": 1,
+        "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "tooltip": false,
-        "format-muted": " Muted",
-        "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
+      "format": "{icon}",
+      "format-muted": "󰖁",
+      "format-icons": {
+          "default": ["", "", "󰕾"]
+      },
+      "on-click": "pamixer -t",
+      "on-scroll-up": "pamixer -i 1",
+      "on-scroll-down": "pamixer -d 1",
+      "on-click-right": "exec pavucontrol",
+      "tooltip-format" : "Volume {volume}%",
     },
 
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
+    "custom/weather": {
+      "exec": "~/.config/waybar/scripts/weather.py",
+      "restart-interval": 300,
+      "return-type": "json",
+    },   
+
+   "custom/lock": {
+       "tooltip" : false,
+       "on-click": "swaylock",
+       "format" : "",
     },
     
-    "temperature": {
-        "thermal-zone": 1,
-        "format": "{temperatureF}°F ",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C "
+    "mpris": {
+      "format": "{player_icon} {title}",
+      "format-paused": " {status_icon} <i>{title}</i>",
+      "player-icons": {
+        "default": "▶",
+        "mpv": "🎵"
+      },
+      "status-icons": {
+        "paused": "⏸"
+      },
+  	  // "ignored-players": ["firefox"]
+    },
+   
+   "custom/spotify": {
+      "exec": "~/.config/waybar/scripts/mediaplayer.py --player youtube-music",
+      "format": " {}",
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-double-click-right": "playerctl next",
+      "on-scroll-down": "playerctl previous",
     },
 
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format": "{essid} - {ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+    "custom/power-menu": {
+      "format": " ⏻ ",
+      "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
+    }, 
+
+    "custom/launcher": {
+      "format": "󱄅",
+      "on-click": "rofi -show drun &",
     },
 
-    "bluetooth": {
-	    "format": " {status}",
-	    "format-disabled": "", // an empty format will hide the module
-	    "format-connected": " {num_connections}",
-	    "tooltip-format": "{device_alias}",
-	    "tooltip-format-connected": " {device_enumerate}",
-	    "tooltip-format-enumerate-connected": "{device_alias}"
-    }
+    "custom/wallpaper": {
+       "format": " 󰔉 ",
+       "on-click": "bash ~/.config/waybar/scripts/changewallpaper.sh",
+    } 
 }
