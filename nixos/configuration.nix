@@ -91,6 +91,7 @@
     pipewire
     wget
     rofi-wayland
+    rofi mako rofimoji
     home-manager
     waybar 
     viewnior
