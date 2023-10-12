@@ -123,7 +123,6 @@
     wf-recorder
     vlc
 
-    # null-ls neovim
     stylua
     nodePackages_latest.eslint_d
     nodePackages_latest.prettier

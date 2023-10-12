@@ -43,15 +43,21 @@
     },
       
     "network": {
-        /* "format-wifi": "直", */
-        "format-wifi": "<small>{bandwidthUpBytes}↑ {bandwidthDownBytes}↓</small> {icon}",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "󰤭",
-        "tooltip-format": "{essid}",
-        "interval": 1,
-        "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        
+      /* "format-wifi": "直", */
+      "format-wifi": "<small>{bandwidthUpBytes}↑ {bandwidthDownBytes}↓</small> {icon}",
+      "format-ethernet": "󰈀",
+      "format-disconnected": "󰤭",
+      "tooltip-format": "{essid}",
+      "interval": 1,
+      "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
+      "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    },
+
+    "temperature": {
+      "interval": 10,
+      "format": " {temperatureC}°C",
+      "format-alt":"temprature",
+      "max-length": 10,
     },
 
     "pulseaudio": {

@@ -12,7 +12,7 @@ require("user.bufferline")
 local themeStatus, catppuccin = pcall(require, "catppuccin")
 
 if themeStatus then
-    vim.cmd("colorscheme catppuccin")
+	vim.cmd("colorscheme catppuccin")
 else
-    return
+	return
 end

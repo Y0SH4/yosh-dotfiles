@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: Material Design Icons, JetBrainsMono Nerd Font, Iosevka Nerd Font;
-  font-size: 14px;
+  font-size: 12;
   border: none;
   border-radius: 0;
   min-height: 0;
@@ -23,6 +23,7 @@ window#waybar.hidden {
 }
 
 #clock,
+#temperature,
 #mpris, 
 #cpu,
 #memory,
@@ -32,7 +33,7 @@ window#waybar.hidden {
 #custom-lock,
 #workspaces,
 #idle_inhibitor,
-#custom-wallpaper, 
+#custom-wallpaper,
 #custom-power-menu,
 #custom-launcher,
 #custom-spotify,
@@ -59,6 +60,10 @@ window#waybar.hidden {
 
   margin-top: 8.5px;
   margin-bottom: 8.5px;
+}
+
+#temperatur {
+  color: #fb958b;
 }
 
 #cpu {
