@@ -27,7 +27,7 @@ require("bufferline").setup({
 		enforce_regular_tabs = false,
 		show_buffer_close_icons = true,
 		view = "multiwindow",
-		separator_style = "thick",
+		separator_style = "thin",
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 		show_buffer_icons = true,
 		show_close_icon = true,

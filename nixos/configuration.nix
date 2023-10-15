@@ -124,8 +124,10 @@
     vlc
 
     stylua
+    lua-language-server
     nodePackages_latest.eslint_d
     nodePackages_latest.prettier
+    lazygit
   ]; 
 
   # Some programs need SUID wrappers, can be configured further or are

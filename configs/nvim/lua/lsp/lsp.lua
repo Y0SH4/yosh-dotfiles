@@ -5,18 +5,18 @@ end
 
 local on_attach = function(client, bufnr)
   local bufmap = function(keys, func)
-    vim.keymap.set('n', keys, func, { buffer = bufnr })
+    vim.keymap.set("n", keys, func, { buffer = bufnr })
   end
 
-  bufmap('<leader>r', vim.lsp.buf.rename)
-  bufmap('<leader>a', vim.lsp.buf.code_action)
+  bufmap("<leader>r", vim.lsp.buf.rename)
+  bufmap("<leader>a", vim.lsp.buf.code_action)
 
-  bufmap('gd', vim.lsp.buf.defnition)
-  bufmap('gD', vim.lsp.buf.declaration)
-  bufmap('gI', vim.lsp.bif.implementation)
-  bufmap('<leader>D', vim.lsp.buf.type_definition)
+  bufmap("gd", vim.lsp.buf.defnition)
+  bufmap("gD", vim.lsp.buf.declaration)
+  bufmap("gI", vim.lsp.bif.implementation)
+  bufmap("<leader>D", vim.lsp.buf.type_definition)
 
-  bufmap('K', vim.lsp.buf.hover)
+  bufmap("K", vim.lsp.buf.hover)
 
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
@@ -26,17 +26,6 @@ local on_attach = function(client, bufnr)
     })
   end
 end
-
-require("mason").setup()
-require("mason-lspconfig").setup({
-  ensure_installed = {
-    "eslint",
-    "lua_ls",
-    "tailwindcss",
-    "cssls",
-    "tsserver"
-  }
-})
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -68,10 +57,28 @@ nvim_lsp.eslint.setup({
   capabilities = capabilities,
 })
 
+nvim_lsp.solc.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  -- root_dir = nvim_lsp.util.root_pattern("hardhat.config.*", ".git"),
+})
+
 nvim_lsp.emmet_ls.setup({
   on_attach = on_attach,
   filetypes = {
-    "css", "ejs", "eruby", "html", "javascript", "javascriptreact", "less", "liquid", "sass", "scss", "svelte", "pug",
-    "typescriptreact", "vue"
-  }
+    "css",
+    "ejs",
+    "eruby",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "less",
+    "liquid",
+    "sass",
+    "scss",
+    "svelte",
+    "pug",
+    "typescriptreact",
+    "vue",
+  },
 })

@@ -6,6 +6,13 @@ return require("packer").startup(function()
 		},
 	})
 	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
+	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
@@ -34,19 +41,27 @@ return require("packer").startup(function()
 	use("folke/which-key.nvim")
 	use("nvim-treesitter/nvim-treesitter-context")
 
+	-- LSP CONFIG
+	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-path", after = "nvim-cmp" })
+	use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
+	use({ "onsails/lspkind-nvim" })
+	use({
+		"mhartington/formatter.nvim",
+		config = function()
+			require("lsp.formatter")
+		end,
+	})
 	use({
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("lsp.lsp")
 		end,
 	})
-	use("onsails/lspkind-nvim")
 	use({
 		"L3MON4D3/LuaSnip",
 		tag = "v2.*",
 	})
-
-	-- cmp: Autocomplete
 	use({
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -54,11 +69,20 @@ return require("packer").startup(function()
 			require("lsp.cmp")
 		end,
 	})
+	use({
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("user.mason-lsp")
+		end,
+	})
+	use({
+		"mfussenegger/nvim-lint",
+		config = function()
+			require("lsp.lint")
+		end,
+	})
 
-	use("hrsh7th/cmp-nvim-lsp")
-	use({ "hrsh7th/cmp-path", after = "nvim-cmp" })
-	use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
-
+	-- Auto Complete
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		config = function()
@@ -71,13 +95,6 @@ return require("packer").startup(function()
 		"lewis6991/gitsigns.nvim",
 		config = function()
 			require("user.gitsigns")
-		end,
-	})
-
-	use({
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("user.mason-lsp")
 		end,
 	})
 
@@ -118,37 +135,23 @@ return require("packer").startup(function()
 		end,
 	})
 
-	use({
-		"mhartington/formatter.nvim",
-		config = function()
-			require("lsp.formatter")
-		end,
-	})
-
 	use("numToStr/Comment.nvim")
 	use("ThePrimeagen/harpoon")
-
 	use({
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-	})
-
-	use({
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"eslint-lsp",
-				"js-debug-adapter",
-				"prettier",
-				"typescript-language-server",
-			},
-		},
-	})
-
-	use({
-		"mfussenegger/nvim-lint",
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
 		config = function()
-			require("lsp.lint")
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
+	use({
+		"phaazon/hop.nvim",
+		branch = "v2", -- optional but strongly recommended
+		config = function()
+			-- you can configure Hop the way you like here; see :h hop-config
+			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
 		end,
 	})
 end)
