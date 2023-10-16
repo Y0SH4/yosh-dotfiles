@@ -21,7 +21,7 @@ require("nvim-tree").setup({
   },
   view = {
     width = 30,
-    side = "left", 
+    side = "left",
   },
   renderer = {
     root_folder_modifier = ":t",

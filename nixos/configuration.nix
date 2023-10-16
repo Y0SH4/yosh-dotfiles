@@ -126,6 +126,9 @@
 
     stylua
     lua-language-server
+    vscode-extensions.dbaeumer.vscode-eslint
+    nodePackages_latest.typescript
+    nodePackages_latest.tailwindcss
     nodePackages_latest.eslint_d
     nodePackages_latest.prettier
     lazygit

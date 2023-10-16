@@ -3,6 +3,21 @@ local lsp_config = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 lsp.preset('recommended')
 
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+lsp.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = {
+    ['tsserver'] = {'javascript', 'typescript'},
+    ['rust_analyzer'] = {'rust'},
+  }
+})
+
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     silent = true,
@@ -42,6 +57,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end
 })
 
+
+
 lsp_config.tailwindcss.setup({
   capabilities = require("lsp.servers.tailwindcss").capabilities,
   filetypes = require("lsp.servers.tailwindcss").filetypes,
@@ -62,4 +79,9 @@ lsp_config.lua_ls.setup({
   capabilities = capabilities,
   handlers = handlers,
   settings = require("lsp.servers.lua_ls").settings,
+})
+
+lsp_config.tsserver.setup({
+  capabilities = capabilities,
+  handlers = handlers,
 })
