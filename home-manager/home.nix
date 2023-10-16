@@ -14,6 +14,8 @@
   home.username = "tuxinity";
   home.homeDirectory = "/home/tuxinity";
 
+
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -35,7 +37,6 @@
     neofetch 
     unzip
     bat
-    rio
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -95,7 +96,7 @@
       enable = true;
       defaultEditor = true;
       viAlias = true;
-      vimAlias = true; 
+      vimAlias = true;  
     }; 
   };
 }
