@@ -38,11 +38,11 @@ require("bufferline").setup({
 
 	highlights = {
 		background = {
-			guifg = comment_fg,
+			guifg = colors.fg,
 			guibg = colors.bg_alt,
 		},
 		fill = {
-			guifg = comment_fg,
+			guifg = colors.fg,
 			guibg = colors.bg,
 		},
 		tab = {
@@ -54,7 +54,7 @@ require("bufferline").setup({
 			guibg = "None",
 		},
 		buffer_selected = {
-			guifg = normal_fg,
+			guifg = colors.fg,
 			guibg = colors.bg_light,
 			gui = "bold",
 		},
@@ -79,7 +79,7 @@ require("bufferline").setup({
 			guibg = colors.bg,
 		},
 		modified_selected = {
-			guifg = string_fg,
+			guifg = colors.fg,
 			guibg = colors.bg_light,
 		},
 	},

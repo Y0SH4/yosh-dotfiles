@@ -83,6 +83,7 @@
   # $ nix search wget 
   environment.systemPackages = with pkgs; [
     (python311.withPackages(ps: with ps; [ requests pyquery ]))
+    gcc
     python311Packages.pip
     python311Full
     python3
