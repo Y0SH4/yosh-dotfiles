@@ -64,6 +64,7 @@ return require("lazy").setup({
   {
     'folke/tokyonight.nvim',
   },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- Hop (Better Navigation)
   {
     "phaazon/hop.nvim",
@@ -119,7 +120,11 @@ return require("lazy").setup({
     },
   },
 
+  -- git
   {
     "lewis6991/gitsigns.nvim",
   },
+  {
+    "f-person/git-blame.nvim"
+  }
 })

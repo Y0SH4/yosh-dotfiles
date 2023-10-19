@@ -3,8 +3,14 @@ local lsp_config = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 lsp.preset('recommended')
 
+-- (Optional) Configure lua language server for neovim
+lsp.nvim_workspace()
+
+lsp.setup()
+
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+  lsp.default_keymaps({ buffer = bufnr })
+  print(client.name .. ': Hello there.')
 end)
 
 lsp.format_on_save({
@@ -13,8 +19,8 @@ lsp.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['tsserver'] = {'javascript', 'typescript'},
-    ['rust_analyzer'] = {'rust'},
+    ['tsserver'] = { 'javascript', 'typescript' },
+    ['rust_analyzer'] = { 'rust' },
   }
 })
 
@@ -29,11 +35,6 @@ local handlers = {
     { virtual_text = true }
   ),
 }
-
--- (Optional) Configure lua language server for neovim
-lsp.nvim_workspace()
-
-lsp.setup()
 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
@@ -56,8 +57,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
   end
 })
-
-
 
 lsp_config.tailwindcss.setup({
   capabilities = require("lsp.servers.tailwindcss").capabilities,
@@ -82,6 +81,10 @@ lsp_config.lua_ls.setup({
 })
 
 lsp_config.tsserver.setup({
+  on_attach = function(client, bufnr)
+    lsp.async_autoformat(client,bufnr)
+  end,
   capabilities = capabilities,
-  handlers = handlers,
+  handlers = require("lsp.servers.tsserver").handlers,
+  settings = require("lsp.servers.tsserver").settings,
 })

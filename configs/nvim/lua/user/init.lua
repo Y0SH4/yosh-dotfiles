@@ -1,6 +1,6 @@
 require("user.plugin")
 require("user.options")
--- require("user.colorscheme.catppuccin")
+require("user.colorscheme.catppuccin")
 require("user.keymaps")
 require("user.whichkey")
 require("user.nvim-tree")
