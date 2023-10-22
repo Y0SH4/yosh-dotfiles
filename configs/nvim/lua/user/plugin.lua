@@ -65,6 +65,12 @@ return require("lazy").setup({
     'folke/tokyonight.nvim',
   },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "lunarvim/horizon.nvim"
+  },
+  {
+    "sheerun/vim-polyglot"
+  },
   -- Hop (Better Navigation)
   {
     "phaazon/hop.nvim",

@@ -123,6 +123,7 @@
     gnome.gnome-calculator
     wf-recorder
     vlc
+    font-manager
 
     stylua
     lua-language-server
@@ -218,6 +219,6 @@
    liberation_ttf
    font-awesome
    cantarell-fonts
-   (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+   (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "CascadiaCode" ]; })
   ]; 
 }
