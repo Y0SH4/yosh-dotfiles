@@ -24,6 +24,13 @@ lsp.format_on_save({
   }
 })
 
+lsp.use('solidity', {
+  cmd = {'nomicfoundation-solidity-language-server', '--stdio' },
+  filetypes = {'solidity'},
+  root_dir = require("lspconfig.util").find_git_ancestor,
+	single_file_support = true,
+})
+
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     silent = true,
@@ -57,6 +64,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
   end
 })
+
+
 
 lsp_config.tailwindcss.setup({
   capabilities = require("lsp.servers.tailwindcss").capabilities,

@@ -124,6 +124,7 @@
     wf-recorder
     vlc
     font-manager
+    polychromatic
 
     stylua
     lua-language-server
