@@ -59,7 +59,7 @@
   users.users.tuxinity = {
     isNormalUser = true; 
     description = "tuxinity";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
      kitty
@@ -133,6 +133,13 @@
     nodePackages_latest.prettier
     lazygit
   ]; 
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable= true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
