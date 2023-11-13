@@ -1,6 +1,6 @@
 local lsp = require('lsp-zero')
 local lsp_config = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 lsp.preset('recommended')
 
 -- (Optional) Configure lua language server for neovim
@@ -66,11 +66,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-lsp_config.rust_analyzer.setup{
+lsp_config.rust_analyzer.setup({
   settings = {
-    ['rust_analyzer'] = {},
-  }
-}
+    ['rust_analyzer'] = {
+      cargo = {
+        autoreload = true,
+        buildScripts = {enable = true},
+      },
+    },
+  },
+  capabilities = capabilities,
+})
 
 lsp_config.tailwindcss.setup({
   capabilities = require("lsp.servers.tailwindcss").capabilities,
