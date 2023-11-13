@@ -123,6 +123,10 @@ return require("lazy").setup({
     },
   },
 
+  {
+    'simrat39/rust-tools.nvim'
+  },
+
   -- git
   {
     "lewis6991/gitsigns.nvim",

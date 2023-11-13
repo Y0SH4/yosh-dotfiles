@@ -66,6 +66,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
+lsp_config.rust_analyzer.setup{
+  settings = {
+    ['rust_analyzer'] = {},
+  }
+}
 
 lsp_config.tailwindcss.setup({
   capabilities = require("lsp.servers.tailwindcss").capabilities,

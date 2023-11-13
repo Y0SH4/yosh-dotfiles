@@ -125,6 +125,9 @@
     vlc
     font-manager
     polychromatic
+    firefox
+    vscode
+    dbeaver
 
     stylua
     lua-language-server
