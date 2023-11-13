@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, outputs, ... }:
 
 {
   nixpkgs = {
@@ -40,6 +40,9 @@
     xplr
     btop
     ripgrep
+    (vscode.overrideAttrs (oldAttrs: {
+      version = "1.84"; # or the specific version you want
+    }))
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -126,7 +126,6 @@
     font-manager
     polychromatic
     firefox
-    vscode
     dbeaver
 
     stylua
