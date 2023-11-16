@@ -1,0 +1,91 @@
+# opacity = 0.98
+# save_to_clipboard = false
+# blinking = "Always"
+# blink_interval = 750
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dynamic_padding = true
+decorations = "full"
+title = "Alacritty"
+dynamic_title = false
+# history = 5_000
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+[window.padding]
+x = 3
+y = 3
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[font]
+size = 12
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font"
+style = "Medium"
+
+[font.bold]
+family = "CaskaydiaCove Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaCove Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "CaskaydiaCove Nerd Font"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+[colors.primary]
+background = "0x1e2127"
+foreground = "0xabb2bf"
+bright_foreground = "0xe6efff"
+
+[colors.normal]
+black = "0x1e2127"
+red = "0xe06c75"
+green = "0x98c379"
+yellow = "0xd19a66"
+blue = "0x61afef"
+magenta = "0xc678dd"
+cyan = "0x56b6c2"
+white = "0x828791"
+
+[colors.bright]
+black = "0x5c6370"
+red = "0xe06c75"
+green = "0x98c379"
+yellow = "0xd19a66"
+blue = "0x61afef"
+magenta = "0xc678dd"
+cyan = "0x56b6c2"
+white = "0xe6efff"
+
+[colors.dim]
+black = "0x1e2127"
+red = "0xe06c75"
+green = "0x98c379"
+yellow = "0xd19a66"
+blue = "0x61afef"
+magenta = "0xc678dd"
+cyan = "0x56b6c2"
+white = "0x828791"
+
+[cursor.style]
+shape = "Block"
+
+[shell]
+program = "/bin/zsh"
+args = [ "-l", "-c", "tmux" ]
