@@ -6,7 +6,7 @@ dynamic_padding = true
 decorations = "full"
 title = "Alacritty"
 dynamic_title = false
-# history = 5_000
+opacity = 0.9
 
 [window.dimensions]
 columns = 120
