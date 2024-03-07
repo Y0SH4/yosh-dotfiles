@@ -21,7 +21,7 @@ instance = "Alacritty"
 general = "Alacritty"
 
 [font]
-size = 12
+size = 10
 
 [font.normal]
 family = "CaskaydiaCove Nerd Font"
@@ -83,4 +83,4 @@ shape = "Block"
 
 [shell]
 program = "/bin/zsh"
-args = [ "-l", "-c", "tmux" ]
+args = ["-l", "-c", "tmux"]
