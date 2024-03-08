@@ -3,8 +3,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = "Catppuccin Macchiato"
+config.audible_bell = "Disabled"
 config.window_background_opacity = 0.90
-config.enable_tab_bar = false
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.animation_fps = 1
@@ -59,8 +59,11 @@ config.harfbuzz_features = {
 	"cv31",
 }
 
--- Switch from tmux to wezterm
+--custom tab bar
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
 
+-- Switch from tmux to wezterm
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
 	-- splitting
@@ -73,6 +76,23 @@ config.keys = {
 		mods = "LEADER",
 		key = "=",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+
+	-- move tab action
+	{
+		mods = "LEADER",
+		key = "1",
+		action = wezterm.action.ActivateTab(0),
+	},
+	{
+		mods = "LEADER",
+		key = "2",
+		action = wezterm.action.ActivateTab(1),
+	},
+	{
+		mods = "LEADER",
+		key = "3",
+		action = wezterm.action.ActivateTab(2),
 	},
 }
 return config
