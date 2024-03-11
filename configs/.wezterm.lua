@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = "Catppuccin Macchiato"
+
 config.audible_bell = "Disabled"
 config.window_background_opacity = 0.90
 config.cursor_blink_ease_in = "Constant"
