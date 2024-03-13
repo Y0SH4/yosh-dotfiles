@@ -39,7 +39,7 @@ end)
 return {
 	font = wezterm.font("Operator Mono Lig"),
 	color_scheme = "Catppuccin Macchiato",
-	font_size = 11,
+	font_size = 12,
 	-- dpi = 100.0,
 	audible_bell = "Disabled",
 	window_background_opacity = 0.9,
@@ -96,5 +96,5 @@ return {
 		"cv29",
 		"cv30",
 		"cv31",
-	}
+	},
 }
