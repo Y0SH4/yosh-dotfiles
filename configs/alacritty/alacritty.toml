@@ -24,19 +24,19 @@ general = "Alacritty"
 size = 10
 
 [font.normal]
-family = "CaskaydiaCove Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 [font.bold]
-family = "CaskaydiaCove Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "CaskaydiaCove Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "CaskaydiaCove Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
 
 [font.offset]
@@ -81,6 +81,6 @@ white = "0x828791"
 [cursor.style]
 shape = "Block"
 
-[shell]
-program = "/bin/zsh"
-args = ["-l", "-c", "tmux"]
+# [shell]
+# program = "/bin/zsh"
+# args = ["-l", "-c", "tmux"]
