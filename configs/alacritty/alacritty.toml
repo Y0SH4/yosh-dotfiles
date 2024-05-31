@@ -21,7 +21,7 @@ instance = "Alacritty"
 general = "Alacritty"
 
 [font]
-size = 10
+size = 11
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -81,6 +81,6 @@ white = "0x828791"
 [cursor.style]
 shape = "Block"
 
-# [shell]
-# program = "/bin/zsh"
-# args = ["-l", "-c", "tmux"]
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux"]
