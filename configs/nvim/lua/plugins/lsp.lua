@@ -1,22 +1,4 @@
 return {
-  -- tools
-  {
-    "williamboman/mason.nvim",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "stylua",
-        "selene",
-        "luacheck",
-        "shellcheck",
-        "shfmt",
-        "tailwindcss-language-server",
-        "typescript-language-server",
-        "css-lsp",
-      })
-    end,
-  },
-
-  -- lsp servers
   {
     "neovim/nvim-lspconfig",
     init = function()
@@ -33,7 +15,6 @@ return {
     end,
     opts = {
       inlay_hints = { enabled = false },
-      ---@type lspconfig.options
       servers = {
         cssls = {},
         tailwindcss = {
@@ -146,6 +127,8 @@ return {
         },
       },
       setup = {},
+      docker_ls = {},
+      rust_analyzer = {},
     },
   },
 }

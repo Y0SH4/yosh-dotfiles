@@ -1,71 +1,82 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
+vim.keymap.set("i", "<C-BS>", "<C-W>")
+vim.keymap.set("i", "<C-h>", "<C-W>")
+vim.keymap.set("n", "Y", "y$", { desc = "Yank to EOL" })
+vim.keymap.set("n", "yil", "0y$", { desc = "Yank in Line" })
 
--- Do things without affecting the registers
-keymap.set("n", "x", '"_x')
-keymap.set("n", "<Leader>p", '"0p')
-keymap.set("n", "<Leader>P", '"0P')
-keymap.set("v", "<Leader>p", '"0p')
-keymap.set("n", "<Leader>c", '"_c')
-keymap.set("n", "<Leader>C", '"_C')
-keymap.set("v", "<Leader>c", '"_c')
-keymap.set("v", "<Leader>C", '"_C')
-keymap.set("n", "<Leader>d", '"_d')
-keymap.set("n", "<Leader>D", '"_D')
-keymap.set("v", "<Leader>d", '"_d')
-keymap.set("v", "<Leader>D", '"_D')
+-- Replace
+vim.keymap.set("n", "R", ":%s//g<Left><Left>", { desc = "Replace in file" })
 
--- Increment/decrement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+-- bufferline
+vim.keymap.set("n", "<A-1>", "<cmd>BufferLineGoToBuffer 1<CR>", { desc = "Go to Buffer 1" })
+vim.keymap.set("n", "<A-2>", "<cmd>BufferLineGoToBuffer 2<CR>", { desc = "Go to Buffer 2" })
+vim.keymap.set("n", "<A-3>", "<cmd>BufferLineGoToBuffer 3<CR>", { desc = "Go to Buffer 3" })
+vim.keymap.set("n", "<A-4>", "<cmd>BufferLineGoToBuffer 4<CR>", { desc = "Go to Buffer 4" })
+vim.keymap.set("n", "<A-5>", "<cmd>BufferLineGoToBuffer 5<CR>", { desc = "Go to Buffer 5" })
+vim.keymap.set("n", "<A-6>", "<cmd>BufferLineGoToBuffer 6<CR>", { desc = "Go to Buffer 6" })
+vim.keymap.set("n", "<A-7>", "<cmd>BufferLineGoToBuffer 7<CR>", { desc = "Go to Buffer 7" })
+vim.keymap.set("n", "<A-8>", "<cmd>BufferLineGoToBuffer 8<CR>", { desc = "Go to Buffer 8" })
+vim.keymap.set("n", "<A-9>", "<cmd>BufferLineGoToBuffer 9<CR>", { desc = "Go to Buffer 9" })
 
--- Delete a word backwards
-keymap.set("n", "dw", 'vb"_d')
+vim.keymap.set("n", "<leader>?", "<cmd>WhichKey<CR>", { desc = "WhichKey" })
 
--- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+-- save with sudo
+vim.cmd([[cab w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!]])
 
--- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+-- Plugin related mappings
+local M = {}
 
--- Disable continuations
-keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
-keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
+M.telescope = {
+  {
+    "<leader>fp",
+    function()
+      require("telescope.builtin").find_files({
+        cwd = require("lazy.core.config").options.root,
+      })
+    end,
+    desc = "Find Plugin File",
+  },
+}
 
--- Jumplist
-keymap.set("n", "<C-m>", "<C-i>", opts)
+M.transparent = {
+  { "<leader>ut", "<cmd>TransparentToggle<CR>" },
+}
 
--- New tab
-keymap.set("n", "te", ":tabedit")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
--- Split window
-keymap.set("n", "ss", ":split<Return>", opts)
-keymap.set("n", "sv", ":vsplit<Return>", opts)
--- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+M.symbols_outline = {
+  { "<leader>cs", "<cmd>SymbolsOutline<CR>", desc = "Symbols Outline" },
+}
 
--- Resize window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
+M.ufo = {
+  {
+    "zR",
+    function()
+      require("ufo").openAllFolds()
+    end,
+    desc = "Open all folds (UFO)",
+  },
+  {
+    "zM",
+    function()
+      require("ufo").closeAllFolds()
+    end,
+    desc = "Close all folds (UFO)",
+  },
+}
 
--- Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
+-- Extra toggles
+M.colorizer = {
+  { "<leader>uk", "<cmd>ColorizerToggle<CR>", desc = "Colorizer Toggle" },
+}
 
-keymap.set("n", "<leader>r", function()
-  require("tuxinity.hsl").replaceHexWithHSL()
-end)
+M.dap = function()
+  vim.keymap.set("n", "<leader>cd", require("dapui").toggle, { desc = "DAP UI" })
+  vim.keymap.set("n", "<leader>cb", require("dap").toggle_breakpoint, { desc = "Toggle Breakpoint" })
+  vim.keymap.set("n", "<F5>", require("dap").continue, { desc = "DAP Continue" })
+  vim.keymap.set("n", "<F10>", require("dap").step_over, { desc = "DAP Step Over" })
+  vim.keymap.set("n", "<F11>", require("dap").step_into, { desc = "DAP Step Into" })
+  vim.keymap.set("n", "<F12>", require("dap").step_out, { desc = "DAP Step Out" })
+end
 
-keymap.set("n", "<leader>i", function()
-  require("tuxinity.lsp").toggleInlayHints()
-end)
+return M
