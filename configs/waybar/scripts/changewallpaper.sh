@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-DIR=$HOME/Pictures/Wallpaper
+DIR=$HOME/Pictures/wallpapers/
 PICS=($(ls ${DIR}))
 
-RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
+RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]}]}
 
 if [[ $(pidof swaybg) ]]; then
   pkill swww

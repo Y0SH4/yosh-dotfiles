@@ -1,7 +1,7 @@
 # !/usr/bin/env bash
 
-swww init &
-swww img ~/Pictures/Wallpaper/japan.png &
+swww-daemon &
+swww img ~/Pictures/wallpapers/digital-art-moon-wallpaper.jpg &
 nm-applet --indicator &
 waybar &
 dunst
