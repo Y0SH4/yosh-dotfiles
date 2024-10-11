@@ -1,0 +1,5 @@
+ls
+exit
+code .config/alacritty/
+which nu
+exit

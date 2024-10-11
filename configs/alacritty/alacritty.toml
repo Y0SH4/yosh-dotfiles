@@ -21,23 +21,11 @@ instance = "Alacritty"
 general = "Alacritty"
 
 [font]
-size = 11
+normal.family = "MesloLGS Nerd Font Mono"
+italic.family = "MesloLGS Nerd Font Mono"
+bold.family = "MesloLGS Nerd Font Mono"
 
-[font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "Medium"
-
-[font.bold]
-family = "JetBrainsMono Nerd Font"
-style = "Bold"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font"
-style = "Italic"
-
-[font.bold_italic]
-family = "JetBrainsMono Nerd Font"
-style = "Bold Italic"
+size = 14
 
 [font.offset]
 x = 0
