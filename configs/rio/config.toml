@@ -1,0 +1,40 @@
+[window]
+width = 1400
+height = 800
+opacity = 0.9
+decorations = "Transparent"
+# env-vars = ['A', 'RIO=13']
+padding-x = 10
+padding-y = [10, 5]
+
+# theme = "dracula"
+theme = "rose-pine"
+
+[editor]
+program = "code"
+args = []
+
+[keyboard]
+use-kitty-keyboard-protocol = false
+disable-ctlseqs-alt = false
+
+[shell]
+#program = "/opt/homebrew/bin/fish"
+#args = ["--login"]
+program = "/opt/homebrew/bin/tmux"
+args = ["new-session", "-c", "/Users/avelino"]
+
+[navigation]
+mode = "Plain"
+
+[fonts]
+family = "JetBrainsMono Nerd Font"
+size = 13
+
+[renderer]
+performance = "High"
+disable-unfocused-render = false
+
+[developer]
+enable-fps-counter = false
+log-level = 'INFO'
