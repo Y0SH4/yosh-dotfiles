@@ -21,11 +21,12 @@ instance = "Alacritty"
 general = "Alacritty"
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
-italic.family = "MesloLGS Nerd Font Mono"
-bold.family = "MesloLGS Nerd Font Mono"
+normal.family = "CascadiaCode NF"
+italic.family = "CascadiaCode NF"
+bold.family = "CascadiaCode NF"
+bold.style = "Bold"
 
-size = 14
+size = 12
 
 [font.offset]
 x = 0
@@ -69,6 +70,6 @@ white = "0x828791"
 [cursor.style]
 shape = "Block"
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux"]
