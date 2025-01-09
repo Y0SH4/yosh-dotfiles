@@ -123,6 +123,7 @@ return {
         "bash",
         "html",
         "javascript",
+        "tailwindcss",
         "json",
         "lua",
         "markdown",
