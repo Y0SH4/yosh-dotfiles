@@ -1,12 +1,5 @@
 # ~/.config/starship.toml
 
-# GENERAL SETTINGS
-[character]
-symbol = "❯" # Prompt symbol
-success_symbol = "[❯](bold green)" # Success color
-error_symbol = "[❯](bold red)" # Error color
-style = "bold white"
-
 # Prompt timeout (speed optimization)
 [cmd_duration]
 min_time = 200 # Show if command takes more than 200ms
@@ -46,18 +39,12 @@ format = "[$symbol $version](bold green)"
 symbol = "⬢" # Nerd Font icon for Node.js
 style = "bold green"
 
-# DOCKER
-[docker]
-format = "[$symbol $version](bold blue)"
-symbol = "🐳"
-style = "bold blue"
-
 # PYTHON
 [python]
 format = "[$symbol $version](bold yellow)"
 symbol = "🐍"
 style = "bold yellow"
-pyenv_version = true # Show pyenv version if available
+pyenv_version_name = true  
 
 # RUST
 [rust]
@@ -90,12 +77,4 @@ symbol = "📦"
 # LINE BREAK
 [line_break]
 disabled = false
-
-# DISABLE UNUSED MODULES
-[aws]
-disabled = true
-[gcloud]
-disabled = true
-[env_var]
-disabled = true
 
