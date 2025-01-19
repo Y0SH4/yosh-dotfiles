@@ -14,7 +14,7 @@ format = "λ "  # Only show the lambda symbol without time
 style = "bold blue"
 
 [git_status]
-format = '[ 📁 $branch$conflicted$modified$staged$untracked$ahead_behind](bold purple)'
+format = '[ 📁$branch$conflicted$modified$staged$untracked$ahead_behind](bold purple)'
 style = "bold purple"
 conflicted = "[⚠️](bold red)"
 modified = "[✏️](bold yellow)"
