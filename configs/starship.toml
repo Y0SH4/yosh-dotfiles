@@ -20,8 +20,8 @@ conflicted = "[⚠️](bold red)"
 modified = "[✏️](bold yellow)"
 staged = "[✔️](bold green)"
 untracked = "[❓](bold white)"
-ahead = "⇡"
-behind = "⇣"
+ahead = "⇡ "
+behind = "⇣ "
 
 # GIT BRANCH
 [git_branch]
