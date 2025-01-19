@@ -1,0 +1,101 @@
+# ~/.config/starship.toml
+
+# GENERAL SETTINGS
+[character]
+symbol = "❯" # Prompt symbol
+success_symbol = "[❯](bold green)" # Success color
+error_symbol = "[❯](bold red)" # Error color
+style = "bold white"
+
+# Prompt timeout (speed optimization)
+[cmd_duration]
+min_time = 200 # Show if command takes more than 200ms
+format = "[⏱️ $duration](bold yellow)"
+style = "bold yellow"
+show_notifications = true
+
+# TIME MODULE
+[time]
+disabled = false
+format = "λ "  # Only show the lambda symbol without time
+style = "bold blue"
+
+[git_status]
+format = '[ 📁 $branch$conflicted$modified$staged$untracked$ahead_behind](bold purple)'
+style = "bold purple"
+conflicted = "[⚠️](bold red)"
+modified = "[✏️](bold yellow)"
+staged = "[✔️](bold green)"
+untracked = "[❓](bold white)"
+ahead = "⇡"
+behind = "⇣"
+
+# GIT BRANCH
+[git_branch]
+format = "[ $branch](bold magenta)" # Display Git branch with Nerd Font icon
+
+# DIRECTORY SETTINGS
+[directory]
+truncation_length = 3 # Show the last 3 parts of the directory
+truncate_to_repo = true # Shorten to Git repo if in one
+style = "bold cyan"
+
+# NODE.JS
+[nodejs]
+format = "[$symbol $version](bold green)"
+symbol = "⬢" # Nerd Font icon for Node.js
+style = "bold green"
+
+# DOCKER
+[docker]
+format = "[$symbol $version](bold blue)"
+symbol = "🐳"
+style = "bold blue"
+
+# PYTHON
+[python]
+format = "[$symbol $version](bold yellow)"
+symbol = "🐍"
+style = "bold yellow"
+pyenv_version = true # Show pyenv version if available
+
+# RUST
+[rust]
+format = "[$symbol $version](bold red)"
+symbol = "⚙️"
+style = "bold red"
+
+# GOLANG
+[golang]
+format = "[$symbol $version](bold cyan)"
+symbol = "🐹"
+style = "bold cyan"
+
+# KUBERNETES
+[kubernetes]
+format = "[$symbol $context](bold blue)"
+symbol = "⎈"
+style = "bold blue"
+
+# DISABLE BATTERY STATUS
+[battery]
+disabled = true
+
+# PACKAGE UPDATES
+[package]
+disabled = false
+format = "[$symbol](bold red)"
+symbol = "📦"
+
+# LINE BREAK
+[line_break]
+disabled = false
+
+# DISABLE UNUSED MODULES
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[env_var]
+disabled = true
+
