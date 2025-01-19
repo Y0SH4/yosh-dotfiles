@@ -3,9 +3,9 @@
 # Prompt timeout (speed optimization)
 [cmd_duration]
 min_time = 200 # Show if command takes more than 200ms
-format = "[⏱️ $duration](bold yellow)"
+format = "[ ⏱️ $duration](bold yellow)"
 style = "bold yellow"
-show_notifications = true
+show_notifications = false
 
 # TIME MODULE
 [time]
