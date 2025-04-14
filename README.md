@@ -1,3 +1,3 @@
-# ❄️ NixOS dotfiles
+# ❄️ MY dotfiles
 
-*My configuration files for NixOS. Feel free to look around and copy!* 
+*My configuration files for LINUX. Feel free to look around and copy!* 
