@@ -3,3 +3,147 @@ exit
 code .config/alacritty/
 which nu
 exit
+exot
+exit
+ls
+exit
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+exit
+ls
+cargo
+curl https://get.volta.sh | bash
+volta
+exit
+colta
+volta
+ls
+volta
+exit
+volta
+ls
+uname -r
+uname
+soure nu
+exit
+volta
+exit
+volta
+cargo install pokemon-icat
+git clone https://github.com/aflaag/pokemon-icat && cd pokemon-icat && sh install.sh
+git clone https://github.com/aflaag/pokemon-icat
+cd pokemon-icat/
+./install.sh
+apt install python3.10-venv
+sudo apt install python3.10-venv
+apt install python3.10-venv
+./install.sh
+cd ../
+pokemon-icat pikachu
+pokemon-icat
+exit
+pokemon-icat
+exit
+git clone https://github.com/sindresorhus/pokemon-colorscripts.git<\n>cd pokemon-colorscripts<\n>sudo ./install.sh<\n>
+cat .ssh/id_ed25519.pub
+git clone git@gitlab.com:phoneybadger/pokemon-colorscripts.git
+ls
+sudo rm -rf pokemon-icat/
+cd pokemon-colorscripts/
+./install.sh
+sudo ./install.sh
+cd ../
+sudo chmod a+x pokemon-colorscripts/
+cd pokemon-colorscripts/
+./install.sh
+cd /usr/local/opt/
+ls
+sudo rm -rf pokemon-colorscripts/
+cd
+cd pokemon-colorscripts/
+./install.sh
+sudo ./install.sh
+pokemon-colorscripts
+pokemon-colorscripts -n charizard
+exit
+which pockemon-colorscript
+which pokemon-colorscript
+pokemon-colorscripts -n charizard
+exit
+ls
+volta install node@lts
+volta install pnpm
+mkdir Dev
+mkdir Workspace
+ls
+sudo rm -rf Workspace/
+cd Dev/
+mkdir Workspace
+cd Workspace
+git clone git@github.com:warmbyte/montoran.git
+cd montoran/
+code .
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt update
+sudo apt install neovim
+ls
+nvim --version
+sudo apt autoremove --purge neovim
+cd /tmp
+cd
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt-get install build-essential procps curl file git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+mkdir -p ~/Applications
+ls
+mkdir --help
+mkdir -p
+mkdir -h
+mkdir Applications
+ls
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+mv nvim.appimage ~/Applications/nvim
+chmod u+x ~/Applications/nvim
+sudo ln -sf ~/Applications/nvim /usr/local/bin/nvim
+nvim
+nvim .
+ls
+cd Applications/
+ls
+sudo chmod a+x nvim
+./nvim
+ls
+cd ../
+sudo rm -rf nvim
+ls
+sudo rm -rf Applications/
+sl
+ls
+nvim
+ls
+nvim
+cd /tmp
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+mv ~/Downloads/nvim-linux-x86_64.tar.gz /tmp
+ls
+tar -xzf nvim-linux-x86_64.tar.gz  
+ls
+sudo mv nvim-linux-x86_64 /opt/nvim
+sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
+nvim
+nvim --version
+cd
+cd Dev/Workspace/
+ls
+cd montoran/
+ls
+cargo install --locked zellij
+jellij
+exit
+zellij
+pnpm dev
+pnpm install
+pnpm dev
+cd ../
+cd
+cd yosh-dotfiles/
