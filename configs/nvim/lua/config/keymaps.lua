@@ -6,6 +6,10 @@ vim.keymap.set("i", "<C-h>", "<C-W>")
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to EOL" })
 vim.keymap.set("n", "yil", "0y$", { desc = "Yank in Line" })
 
+-- Custom clipboard mappings (more efficient)
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>yy", '"+yy', { desc = "Copy line to system clipboard" })
+
 -- Replace
 vim.keymap.set("n", "R", ":%s//g<Left><Left>", { desc = "Replace in file" })
 

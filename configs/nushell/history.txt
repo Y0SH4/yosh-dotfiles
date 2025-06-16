@@ -147,3 +147,1125 @@ pnpm dev
 cd ../
 cd
 cd yosh-dotfiles/
+exit
+sudo init 0
+sudo apt update
+cd yosh-dotfiles/
+code .
+exit
+ls
+ln -s ~/yosh-dotfiles/configs/nvim/ ~/.config/
+nvim
+nvim 
+nvim
+cd yosh-dotfiles/
+ls
+cd configs/
+cd nvim/
+code .
+cd
+nvim 
+nvim
+nvim 
+nvim
+sudo poweroff
+sudo apt update
+ls
+cd Dev/Workspace/
+cd ../
+ls
+mkdir Akademia
+ls
+cd Akademia/
+cd
+cd Downloads/
+sudo dpkg -i discord-0.0.94.deb
+cd
+cd Dev/Akademia/
+ls
+git clone git@github.com:Y0SH4/krusty-learn.git
+cd krusty-learn/
+nvim
+sudo apt install tmux
+cd
+ln -s ~/yosh-dotfiles/configs/.tmux.conf ~/
+ls
+cd yosh-dotfiles/
+code .
+cd configs/nvim/
+ls
+code .
+cd Dev/
+ls
+cd Workspace/
+ls
+cd ../
+ls
+cd Akademia/
+ls
+cd krusty-learn/
+nvim .
+curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg<\n>echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt update
+sudo apt install spotify-client
+nvim .
+nvim
+:q
+sudo apt install fzf
+sudo apt install rg lazygit
+sudo apt install rg
+sudo apt install rgfind
+sudo apt install ripgrep
+sudo apt install lazygit
+cd
+cd Downloads/
+ls
+tar -C /usr/local -xzf go1.24.3.linux-amd64.tar.gz<\n>
+sudo tar -C /usr/local -xzf go1.24.3.linux-amd64.tar.gz<\n>
+go version
+export PATH=$PATH:/usr/local/go/bin
+nvim 
+cd yosh-dotfiles/
+nvim .
+go version
+exit
+exit
+exit
+tmux
+exit
+go
+go --version
+ls /usr/local/go/bin/go<\n>
+echo $env.PATH
+/usr/local/go/bin/go version<\n>
+cd yosh-dotfiles/
+code .
+nvim .
+go
+go --version
+do
+nvim .
+:q
+nvim .
+:Q
+sudo apt install wl-clipboard
+nvim .
+go
+go --version
+cd Dev/Akademia/
+cd yosh-dotfiles/configs/nvim/
+code .
+cd ~/Dev/Workspace/montoran/
+nvim .
+:q
+sudo poweroff
+sudo apt update
+cd yosh-dotfiles/
+nvim .
+exit
+nvim yosh-dotfiles/
+exit
+nvim yosh-dotfiles/
+exit
+nvim yosh-dotfiles/
+exit
+sudo apt install okular
+ls
+exit
+cd Dev/
+lks
+ls
+cd Akademia/
+ls
+cd krusty-learn/
+cd .config/
+nvim okularrc
+cd
+cd Dev/
+ls
+cd Workspace/
+ls
+cd ../
+cd Akademia/
+ls
+cd krusty-learn/
+ls
+cd perulangan/
+cargo run
+cd ../
+git add .
+git commit -m "update perulangan"
+git push origin main
+nvim .
+ls
+cd data_type/
+ls
+cd ../
+cargo new Array
+cargo new datatype_array
+ls
+cd datatype_array/
+ls
+cd
+cd yosh-dotfiles/
+cd configs/nvim/
+code .
+nvim .
+cd
+cd Dev/Akademia/
+ls
+cd krusty-learn/
+ls
+cd datatype_array/
+cargo run
+nvim .
+:q
+nvim 
+sudo init 6
+curl -fsS https://dl.brave.com/install.sh | sh
+sudo apt install brave
+sudo apt install brave-browser
+cd 
+ls
+cd Web
+ls
+cd Dev/
+ls
+git clone git@github.com:warmbyte/montoran.git
+cd montoran/
+sudo rm -rf .git/
+ls
+echo "# montoran-fe" >> README.md<\n>git init<\n>git add README.md<\n>git commit -m "first commit"<\n>git branch -M main<\n>git remote add origin https://github.com/tuxinity/montoran-fe.git<\n>git push -u origin main
+git status
+git add .
+git commit -m "initial commit"
+git push origin main
+cd ../
+ls
+cd Akademia/
+ls
+cd ../Workspace/
+ls
+cd montoran/
+nvim .
+ls
+cd ../
+ls
+cd ../
+ls
+cd montoran/
+code .
+pnpm dev
+pnpm install
+pnpm dev
+pnpm build
+git add .
+git commit -m "update"
+git push origin main
+sudo poweroff
+sudo apt update
+sudo apt upgrade
+cd Dev/
+ls
+cd Workspace/
+cd montoran/
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \<\n>  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \<\n>  && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \<\n>  | sudo tee /etc/apt/sources.list.d/ngrok.list \<\n>  && sudo apt update \<\n>  && sudo apt install ngrok
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \<\n>  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null 
+echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \<\n>  | sudo tee /etc/apt/sources.list.d/ngrok.list \<\n>  && sudo apt update \<\n>  && sudo apt install ngrok
+echo "deb https://ngrok-agent.s3.amazonaws.com buster main" 
+sudo tee /etc/apt/sources.list.d/ngrok.list 
+sudo apt update
+sudo apt install ngrok
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \<\n>  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \<\n>  && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \<\n>  | sudo tee /etc/apt/sources.list.d/ngrok.list \<\n>  && sudo apt update \<\n>  && sudo apt install ngrok
+cd Downloads/
+sudo tar -xvzf ~/Downloads/ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+ngrok
+ngrok config add-authtoken 21bFtq82Rf1FFCJcAdCq6Cmcg92_5rtx7A3o7Tkj7Hgiu5BAB
+ngrok http http://localhost:3000
+pnpm dev
+cd ../
+ls
+cd Dev/
+ls
+cd montoran/
+cd ../
+cd montoran/
+code .
+pnpm dev
+nvim .
+cd
+cd Dev/
+ls
+cd montoran/
+nvim .
+cd
+cd yosh-dotfiles/configs/nvim/
+code .
+cd
+cd Dev/Workspace/
+ls
+cd ../
+ls
+cd montoran/
+nvim .
+pnpm dev
+pnpm build
+pnpm build
+code .
+pnpm build
+pnpm dev
+git add .
+git commit -m "update"
+git push origin main
+ls
+pnpm dev
+cd ../
+ls
+cd montoran/
+ngrok http http://localhost:3000
+cd ../
+cd Workspace/
+ls
+cd montoran/
+pnpm build
+code .
+pnpm build
+pnpm dev
+git status
+git add .
+git commit -m "fix: resolve hydration errors in responsive navbar and about page<\n><\n>- Add SheetTitle and SheetDescription to mobile menu for accessibility<\n>- Fix hydration mismatches in about page with mounted state pattern<\n>- Implement consistent server/client rendering for internationalization<\n>- Ensure initial render always uses default language (Indonesian)<\n>- Switch to user's preferred language after client-side hydration<\n>- Remove unused state variables in navbar component"
+git push  origin master
+cd ../
+ls
+sudo rm -rf montoran/
+git clone --mirror git@github.com:warmbyte/montoran.git
+cd montoran.git/
+git remote add new-origin https://github.com/tuxinity/montoran.git
+git push --mirror new-origin
+git push --mirror new-origin --prune '+refs/heads/*:refs/heads/*' '+refs/tags/*:refs/tags/*'
+git push new-origin '+refs/heads/*:refs/heads/*' '+refs/tags/*:refs/tags/*'
+cd ../
+sudo rm -rf montoran.git/
+git clone --mirror git@github.com:warmbyte/montoran.git
+cd montoran.git/
+git remote add new-origin https://github.com/tuxinity/montoran.git
+git push --mirror new-origin
+git remote
+sudo poweroff
+sudo reboot
+sudo apt update
+cd Dev/Workspace/
+ls
+cd montoran/
+sudo apt upgrade
+cd Dev
+ls
+cd Workspace/
+ls
+cd ../
+ls
+cd Akademia/
+ls
+cd krusty-learn/
+nvim .
+code .
+sudo reboot
+sudo apt upgrade
+cd Dev/
+ls
+cd Akademia/
+ls
+cd krusty-learn/
+code .
+sudo poweroff
+sudo apt update
+cd Dev/
+ls
+cd Workspace/
+ls
+cd montoran/
+curl -f https://zed.dev/install.sh | sh
+zed .
+cd ../
+ls
+cd ../
+ls
+cd Akademia/
+ls
+cd krusty-learn/
+code .
+zed .
+sudo poweroff
+sudo apt update
+sudo apt upgrade
+sudo apt update
+ls
+cd Dev/
+ls
+cd Akademia/
+ls
+mkdir crab-house
+cd crab-house/
+ls
+mkdir section_2
+ls
+cd section_2/
+cargo new variables
+cd variables/
+cd ../
+zed .
+exit
+cd Dev/Akademia/
+ls
+cd ls
+ls
+cd crab-house/
+ls
+zed .
+cd Dev/
+ls
+cd Akademia/
+ls
+cd crab-house/
+ls
+zed .
+cd section_2/
+ls
+cd variables/
+cargo build
+cargo run
+cd ../
+cargo new data_types
+ls
+cd data_types/
+cargo run dev
+sudo poweroff
+ping 8.8.8.8
+cd Workspace/
+cd Dev/
+ls
+cd Akademia/
+ls
+cd crab-house/
+ls
+cd section_2
+ls
+cargo new control_flow
+ls
+cd ../
+zed .
+cargo run dev
+cd section_2/
+cargo run dev
+cargo data_types/
+cargo build
+cd data_types/
+ls
+cargo build
+cargo run dev
+cargo build
+cargo dev
+cargo run dev
+ls
+cd section_2/data_types/
+pkill -f zed
+zed .
+cd ../
+ls
+cd ../
+zed .
+ls
+cargo run build
+cargo build
+cargo run dev
+sudo reboot
+cd Dev/Workspace/
+cd ../
+cd Akademia/
+ls
+cd crab-house/
+zed .
+cargo build
+cargo run dev
+cargo run dv
+cargo run dev
+sudo poweroff
+cd Dev/
+ls
+cd Akademia/
+ls
+cd 0
+cd crab-house/
+ls
+zed .
+cd section_2/data_types
+ls
+sudo reboot
+cd Dev/Akademia/
+ls
+cd crab-house/
+sudo poweroff
+sudo apt update
+sudo apt upgrade
+cd Dev/
+ls
+cd Workspace/
+ls
+cd ../
+ls
+cd Akademia/
+ls
+cd crab-house/
+ls
+cd section_2/
+ls
+cd control_flow/
+ls
+cd ../
+ls
+cd variables/
+ls
+cd ../
+zed .
+cargo build
+cargo run dev
+cargo build
+cargo dev
+cargo run dev
+cargo rund ev
+cargo run dev
+cd section_2/
+ls
+cd data_types/
+ls
+ls -a
+cd ../
+echo "# crab_house" >> README.md<\n>git init<\n>git add README.md<\n>git commit -m "first commit"<\n>git branch -M main<\n>git remote add origin git@github.com:Y0SH4/crab_house.git<\n>git push -u origin main
+git remote add origin git@github.com:Y0SH4/crab_house.git<\n>git branch -M main<\n>git push -u origin main
+git add .
+git commit -m "update"
+git push origin main
+cd ../
+ls
+cd crab-house/
+ls
+sudo rm -rf .git/
+ls
+cd section_2/
+ls
+cd control_flow/
+sudo rm -rf .git/
+ls
+cd ../
+ls
+cd variables/
+sudo rm -rf .git/
+cd ../
+ls
+cd data_types/
+sudo rm -rf .git/
+cd ../
+ls
+cd ../
+ls
+echo "# crab_house" >> README.md<\n>git init<\n>git add README.md<\n>git commit -m "first commit"<\n>git branch -M main<\n>git remote add origin git@github.com:Y0SH4/crab_house.git<\n>git push -u origin main
+ls
+git status
+git add .
+git commit -m "completed variables"
+git push origin master
+git status
+git add .
+git remote add origin git@github.com:Y0SH4/crab_house.git<\n>git branch -M main<\n>git push -u origin main
+ls
+cd section_2/
+cargo new functions --vcs none
+ls
+cd functions/
+ls
+ls -a
+cd ../
+cd functions/
+cargo build
+cargo run dev
+cargo run build
+ls
+ls -a
+cd ../
+git add .
+git commit -m "completed function"
+git push origin main
+sudo reboot
+sudo apt update
+sudo apt upgrade
+ssh root@68.183.231.49
+cd Dev/Akademia/
+ls
+cd crab-house/
+cd section_2/
+cargo new control_flow --vcs none
+cargo init control_flow --vcs none
+ls
+sudo rm -rf control_flow
+ls
+ls -a
+cargo init control_flow --vcs none
+cd control_flow/
+cd ../
+zed .
+ls
+cd control_flow/
+cargo buil
+cargo build
+cargo run dev
+cd
+cd Dev/Akademia/crab-house/
+ls
+ls -a
+cargo new koplek
+ls
+cd koplek/
+ls
+ls -a
+cd src/
+ls
+cargo run dev
+ls
+ls -a
+cd ../
+ls -a
+cd ../
+ls
+cd bangyosh/
+lks
+ls
+cd Dev/Akademia/crab-house/
+git rm -r --cached target/
+touch .gitignore
+git status
+git add .
+git commit -m "add gitignore"
+git push origin main
+ls
+cd section_2/
+cargo new assignment --vcs none
+cd assignment/
+ls
+cd Dev/Workspace/
+ls
+cd ../
+ls
+cd Akademia/
+ls
+cd crab-house/
+ls
+cd section_2/
+ls
+cd assignment/
+ls
+cargo run dev
+1
+cargo run dev
+cd ../
+git status
+nvim .gitignore
+git status
+git add .
+git commit -m "finishing section 2"
+git push origin main
+sudo reboot
+cd Dev/
+ls
+cd Akademia/
+ls
+cd crab-house/
+ls
+mkdir section_3
+cd ../
+ls
+cd ../
+ls
+cd Workspace/
+ls
+cd montoran/
+pnpm dev
+code .
+pnpm dev
+pnpm build
+pnpm dev
+sudo init 0
+sudo apt update
+sudo apt upgrade
+sudo reboot
+cd Dev/
+lks
+cls
+ls
+cd Akademia/
+ls
+cd crab-house/
+ls
+cd section_3/
+ls
+cargo new ownership --vcs none
+ls
+cd ../
+cd Dev/Workspace/
+ls
+cd ../
+ls
+cd ak Akademia/
+cd Akademia/
+ls
+cd crab-house/
+ls
+cd section_3/
+cd ownership/
+ls
+cargo build
+cargo run dev
+cargo build 
+cargo build
+cargo run dev
+cargo build
+cargo dev
+cargo run dev
+cd ../
+ls
+cd ../
+ls
+cd Akademia/
+ls
+cd ../
+cd Workspace/
+ls
+cd montoran/
+nvim .
+cd ../
+cd Akademia/crab-house/
+cargo run build
+cd section_3/ownership/
+cargo build
+cargo run dev
+sudo poweroff
+sudo apt update
+sudo apt upgrade
+cd Dev/
+ls
+cd Workspace/
+ls
+cd ~/Downloads/
+sudo dpkg -i discord-0.0.97.deb
+cd ~/Dev/Workspace/
+ls
+git clone git@gitlab.com:pt-amd/crowd-contract.git
+cd crowd-contract/
+zed .
+pnpm install 
+pnpm intsall 
+pnpm dev
+pnpm hardhat test
+pnpx hardhat test
+ls
+cd test/
+pnpm hardhat test
+cd Network.test.ts
+pnpm hardhat test Network.test.ts
+pnpm install
+cd ../
+pnpm hardhat test test/Network.test.ts
+pnpm hardhat test
+ls
+cd Downloads/
+ls
+./Cursor-1.0.0-x86_64.AppImage
+chmod u+x Cursor-1.0.0-x86_64.AppImage
+pnpm hardhat run
+pnpm hardhat compile
+pnpm hardhat reset
+pnpm hardhat clear
+pnpm hardhat clean
+pnpm hardhat install
+pnpm hardhat compile
+pnpm hardhat test
+pnpm run test:network
+pnpm add @ethersproject/contracts<\n>
+pnpm hardhat test test/Network.test.ts
+pnpm run test:network
+pnpm hardhat test test/networkv2.test.ts
+pnpm compile
+pnpm hardhat compile
+pnpm hardhat clean
+pnpm hardhat compile
+./Cursor-1.0.0-x86_64.AppImage
+sudo reboot
+cd Downloads/
+ls
+cd Dev/Workspace/
+ls
+cd crowd-contract/
+ls
+git checkout -B "fix/network"
+git commit -m "fixing register network"
+git push origin fix/network
+git add .
+git commit -m "fixing network fn register"
+git push origin fix/network
+git add .
+git commit -m "add comment"
+git push origin fix/network
+./Cursor-1.0.0-x86_64.AppImage
+sudo reboot
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+cd Dev/Workspace/
+ls
+cd crowd-contract/
+ls
+zed .
+code .
+pnpm hardhat clean
+pnpm hardhat compile
+pnpm run upgrade:mainnet
+kls
+ls
+cd Downloads/
+ls
+git pull origin fix/network
+pnpm hardhat test test/Network.v2.test.ts
+pnpm hardhat test test/Network.test.ts
+pnpm hardhat test test/NetworkY.test.ts
+npx hardhat test test/NetworkY.test.ts
+pnpx hardhat test test/NetworkY.test.ts
+pnpm hardhat test test/NetworkY.test.ts
+pnpm hardhat clean
+pnpm hardhat compile
+pnpm run upgrade:mainnet
+pnpm hardhat clean
+pnpm hardhat compile
+pnpm run upgrade:mainnet
+pnpm hardhat clean
+pnpm hardhat compile
+pnpm hardhat run scripts/check-accounts.ts
+pnpm hardhat run scripts/check-id-zero.ts --network bsc_mainnet
+pnpm hardhat run scripts/cleanup.ts --network bsc_mainnet
+git add .
+git commit -m "pukai pukai"
+git push origin fix/network
+cd ../
+ls
+git clone git@github.com:DigitalExpert-IT/zenvana-fe.git
+ls
+cd zenvana-fe/
+pnpm install
+code .
+./Cursor-1.0.0-x86_64.AppImage
+sudo poweroof
+sudo poweroff
+cd Dev/
+ls
+cd Workspace/
+ls
+cd montoran/
+ls
+cd ../
+ls
+cd zenvana-fe/
+ls
+code .
+pnpm install
+cd Dev/
+ls
+cd 
+cd Dev/
+ls
+cd Workspace/
+ls
+cd crowd-contract/
+ls
+zed .
+pnpm dev
+git add .
+git commit -m "update remove register button"
+git push origin main
+ls
+bash docker-build.sh
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+# Add Docker's official GPG key:<\n>sudo apt-get update<\n>sudo apt-get install ca-certificates curl<\n>sudo install -m 0755 -d /etc/apt/keyrings<\n>sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc<\n>sudo chmod a+r /etc/apt/keyrings/docker.asc<\n><\n># Add the repository to Apt sources:<\n>echo \<\n>  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \<\n>  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \<\n>  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<\n>sudo apt-get update
+sudo apt update && sudo apt upgrade -y<\n>
+sudo apt update
+sudo apt upgrade
+sudo apt install apt-transport-https ca-certificates curl software-properties-common lsb-release -y<\n>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg<\n>
+echo \<\n>  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \<\n>  https://download.docker.com/linux/ubuntu \<\n>  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<\n>
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update<\n>sudo apt install docker-ce docker-ce-cli containerd.io -y<\n>
+sudo apt update
+exit
+ls
+sudo apt update and sudo apt upgrade -y<\n>
+sudo apt install apt-transport-https ca-certificates curl software-properties-common lsb-release -y<\n>
+ls
+cd /etc/apt/sources.list.d/
+ls
+sudo rm -rf docker.list
+cd
+sudo apt install apt-transport-https ca-certificates curl software-properties-common lsb-release -y<\n>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor --output /usr/share/keyrings/docker-archive-keyring.gpg<\n>
+let arch = (dpkg --print-architecture | str trim)<\n>let codename = (lsb_release -cs | str trim)<\n>echo $"deb [arch=($arch) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu ($codename) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<\n>
+sudo apt update<\n>sudo apt install docker-ce docker-ce-cli containerd.io -y<\n>
+sudo docker run hello-world<\n>
+sudo usermod -aG docker $USER<\n>
+sudo usermod -aG docker $env.USER<\n>
+exit<\n>
+docker 
+docker ps -a
+docker login ghcr.io
+ls
+cd Dev/
+ls
+cd Workspace/
+ls
+cd zenvana-fe/
+bash docker-build.sh
+cd
+cd Downloads/
+ls
+pnpm dev
+git add .
+git commit -m "rollback button <\n>"
+git push origin main
+bash docker-build.sh
+cd Dev/Workspace/
+ls
+cd zenvana-fe/
+ls
+bash docker-build.sh
+docker 
+docker ps -a
+bash docker-build.sh
+ssh root@68.183.231.49
+pnpm dev
+git add .
+git commit -m "fixing condition registration"
+git push origin main
+./Cursor-1.0.0-x86_64.AppImage
+zed .
+bash docker-build.sh
+exit
+ssh root@68.183.231.49
+sudo poweroff
+sudo apt update
+sudo apt upgrade
+cd Dev/
+ls
+cd crowd-contract/
+ls
+ls 
+ls -a
+cd >
+ls
+cd Downloads/
+pnpm hardhat compile
+pnpm run fix:double-registration:mainnet
+pnpm hardhat compile
+pnpm hardhat run upgrade:mainnet
+pnpm hardhat run scripts/upgrade.ts --network bsc_mainnet
+pnpm hardhat run scripts/fixDoubleRegistration.ts --network bsc_mainnet
+pnpm run detect-duplicates:mainnet
+pnpm run scripts/upgrade.ts --network bsc_mainnet 
+pnpm hardhat run scripts/upgrade.ts --network bsc_mainnet
+pnpm hardhat storage-layout
+pnpx hardhat storage-layout
+pnpm hardhat storage-layout
+pnpm hardhat verify --network bsc_mainnet 0xB97a3d0A0a8ea5d41917DefCCfcDD171DDbF21F6
+pnpm hardhat run scripts/validate-upgrade.ts --network bsc_mainnet
+pnpm hardhat compile
+pnpm hardhat run scripts/validate-upgrade.ts --network bsc_mainnet
+pnpm hardhat run scripts/upgrade.ts --network bsc_mainnet
+git add .
+git commit -m "add injet active downline and total downline"
+git push origin fix/network
+pnpm hardhat run scripts/quick-account-check.ts --network bsc_mainnet
+hardhat run scripts/debug-account-issue.ts --network bsc_mainnet
+pnpm hardhat run scripts/debug-account-issue.ts --network bsc_mainnet
+pnpm hardhat run scripts/quick-account-check.ts --network bsc_mainnet
+pnpm hardhat run scripts/debug-account-issue.ts --network bsc_mainnet
+ssh root@68.183.231.49
+pnpm hardhat run scripts/critical-account-analysis.ts --network bsc_mainnet
+hardhat run scripts/analyze-account-data.ts --network bsc_mainnet
+pnpm hardhat run scripts/analyze-account-data.ts --network bsc_mainnet
+pnpm hardhat run scripts/check-implementation.ts --network bsc_mainnet
+pnpm hardhat run scripts/diagnose-network.ts --network bsc
+pnpm hardhat run scripts/diagnose-network.ts --network bsc_mainnet
+hardhat run scripts/validate-upgrade.ts --network bsc_mainnet
+pnpm hardhat run scripts/validate-upgrade.ts --network bsc_mainnet
+volta
+./Cursor-1.0.0-x86_64.AppImage
+ls
+pnpm hardhat run scripts/rollback-fix.ts --network bsc_mainnet
+pnpm hardhat run scripts/rollback.ts --network bsc_mainnet
+pnpm hardhat run scripts/rollback-fix.ts --network bsc_mainnet
+ssh root@68.183.231.49
+pnpm hardhat compile
+hardhat run scripts/force-import.ts --network bsc_mainnet
+pnpm hardhat run scripts/force-import.ts --network bsc_mainnet
+pnpm hardhat run scripts/rollback-fix.ts --network bsc_mainnet
+pnpm hardhat console --network bsc_mainnet
+./Cursor-1.0.0-x86_64.AppImage
+ls
+code .
+cd Dev/Workspace/
+ls
+cd crowd-contract
+ls
+code .
+ssh root@68.183.231.49
+cd ../
+ls
+cd
+cd Dev/
+ls
+cd Workspace/
+ls
+zenvana-fe/
+ls
+cd Dev/Workspace/
+l;s
+ls
+cd crowd-contract/
+ls
+git status
+git checkout main
+git checkout -B "fix/network"
+git status
+code .
+git add .
+git commit -m "fail upgrade"
+git push origin fix/network
+git pull origin main
+git add .
+git push origin fix/network
+git pull
+git pull origin fix/network
+git config pull.rebase false
+git pull origin fix/network
+git add .
+git push origin fix/network
+git pull
+git push origin fix/network
+git pull pull
+git pull
+git push origin fix/network
+git pull
+git pull origin fix/network
+git commit -m "update"
+git push origin fix/network
+git checkout main
+git pull origin main
+ls
+git status
+git pull origin main
+pnpm hardhat compile
+./Cursor-1.0.0-x86_64.AppImage
+pnpm dev
+git add .
+git commit -m "update"
+git push origin main
+bash docker-build.sh
+ssh root@68.183.231.49
+code .
+ls
+git status
+bash docker-build.sh
+ls
+git add .
+git commit -m "add maentenance page"
+git push origin main
+ssh root@68.183.231.49
+cd ../
+ls
+cd zenvana-fe
+ls
+code .
+git add .
+git commit -m "update days"
+git push origin main
+ls
+bash docker-build.sh
+ls
+ssh root@68.183.231.49
+ls
+bash deploy.sh
+bash docker-build.sh
+ssh root@68.183.231.49
+cd ../crowd-contract/
+git reset --hard 8deeb0b7
+code .
+pnpm run upgrade:mainnet
+git status
+git add .
+git commit -m "update"
+git push origin main
+ls
+cd ../
+ls
+cd crowd-contract/
+ls
+./Cursor-1.0.0-x86_64.AppImage
+cd Dev/Workspace/
+ls
+cd crowd-contract/
+ls
+cd ../
+ls
+cd zenvana-fe/
+code .
+cd ../
+ls
+cd crowd-contract/
+code .
+pnpm run upgrade:mainnet
+sudo poweroff
+sudo apt update
+sudo apt upgrade
+ls
+cd Dev/
+ls
+cd Workspace/
+sudo apt update
+sudo apt install openjdk-17-jdk unzip
+cd ~/Downloads/
+ls
+tar -xzf android-studio-*.tar.gz
+ls
+sudo mv android-studio /opt/
+/opt/android-studio/bin/studio.sh
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo adduser $USER libvirt
+echo $USER
+whoami
+let username = bangyosh
+sudo usermod -aG libvirt bangyosh
+sudo usermod -aG kvm bangyosh
+groups bangyosh
+sudo apt install wathcman
+sudo apt install watchman
+cd
+nvim .config/nushell/env.nu
+nvim .config/nushell
+npm install -g react-native-cli
+exit
+pkill -f tmux
+sudo pkill -f tmux
+exit
+nvim .config/nushell/env.nu
+source ~/.config/nushell/env.nu<\n>
+ls
+cd .config/nushell
+code .
+source ~/.config/nushell/env.nu<\n>
+cd
+cd yosh-dotfiles/
+git status

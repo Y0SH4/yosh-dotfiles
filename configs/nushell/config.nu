@@ -7,6 +7,18 @@ do {
   ^pokemon-colorscripts -r --no-title
 }
 
+# Auto-start tmux
+if (which tmux | is-empty) == false {
+    # Check if we're not already in a tmux session
+    let tmux_exists = ($env | get -i TMUX | default "")
+    if ($tmux_exists == "") {
+        ^tmux new-session -A -s main
+    }
+}
+# Go
+let go_path = '/usr/local/go/bin'
+$env.PATH = ($env.PATH | prepend $go_path)
+
 # starship
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
