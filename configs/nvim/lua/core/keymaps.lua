@@ -1,27 +1,47 @@
+-- Leader Key Setup
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-local map = vim.keymap.set
-local opts = { noremap = true, silent = true }
+-- Disable default action of Space in normal and visual mode
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
--- NvimTree toggle & window navigation
-map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)  -- Toggle explorer
-map("n", "<C-h>", "<C-w>h", opts)                   -- Move to left window (explorer)
-map("n", "<C-l>", "<C-w>l", opts)                   -- Move to right window (editor)
+-- Alias biar pendek
+local keymap = vim.keymap.set
+local opts = { silent = true }
 
--- Save and quit
-map("n", "<C-s>", ":w<CR>", opts)                   -- Save file
-map("n", "<C-q>", ":q<CR>", opts)                   -- Quit window
+keymap("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+-- Clear search highlight
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", vim.tbl_extend("force", opts, {
+  desc = "Clear search highlight"
+}))
 
--- Format document (using LSP)
-map("n", "<C-S-f>", function() vim.lsp.buf.format() end, opts)
+-- Diagnostics
+keymap("n", "[d", vim.diagnostic.goto_prev, vim.tbl_extend("force", opts, {
+  desc = "Go to previous diagnostic"
+}))
+keymap("n", "]d", vim.diagnostic.goto_next, vim.tbl_extend("force", opts, {
+  desc = "Go to next diagnostic"
+}))
+keymap("n", "<leader>e", vim.diagnostic.open_float, vim.tbl_extend("force", opts, {
+  desc = "Show diagnostic error"
+}))
+keymap("n", "<leader>q", vim.diagnostic.setloclist, vim.tbl_extend("force", opts, {
+  desc = "Open diagnostic quickfix"
+}))
 
--- Telescope keymaps
-map("n", "<C-p>", "<cmd>Telescope find_files<CR>", opts)
-map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
-map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+-- Terminal: Exit terminal mode with <Esc><Esc>
+keymap("t", "<Esc><Esc>", "<C-\\><C-n>", vim.tbl_extend("force", opts, {
+  desc = "Exit terminal mode"
+}))
 
--- Comment.nvim toggle comment (normal & visual modes)
-map("n", "<C-_>", "gcc", { remap = true, silent = true })
-map("v", "<C-_>", "gc", { remap = true, silent = true })
-
+-- Buffer navigation (only if BufferLine is available)
+pcall(function()
+  keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", vim.tbl_extend("force", opts, {
+    desc = "Previous buffer"
+  }))
+  keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", vim.tbl_extend("force", opts, {
+    desc = "Next buffer"
+  }))
+end)
