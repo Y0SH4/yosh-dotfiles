@@ -1,0 +1,12 @@
+#!/bin/bash
+used=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+total=$(df -h / | awk 'NR==2 {print $2}')
+echo "󰋊 ${used}% of $total"
+
+if [ "$used" -gt 90 ]; then
+  echo "#FF0000"
+elif [ "$used" -gt 70 ]; then
+  echo "#FFA500"
+else
+  echo "#00FF00"
+fi

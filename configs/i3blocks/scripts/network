@@ -1,0 +1,7 @@
+#!/bin/bash
+wifi=$(iwgetid -r)
+if [ "$wifi" ]; then
+  echo " $wifi"
+else
+  echo "❌ No Wi-Fi"
+fi

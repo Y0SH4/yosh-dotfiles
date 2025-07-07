@@ -1,0 +1,13 @@
+#!/bin/bash
+temp_raw=$(cat /sys/class/thermal/thermal_zone0/temp)
+temp_c=$(echo "$temp_raw / 1000" | bc)
+
+echo " ${temp_c}°C"
+
+if [ "$temp_c" -ge 80 ]; then
+  echo "#FF0000"  # merah
+elif [ "$temp_c" -ge 60 ]; then
+  echo "#FFA500"  # oranye
+else
+  echo "#00FF00"  # hijau
+fi

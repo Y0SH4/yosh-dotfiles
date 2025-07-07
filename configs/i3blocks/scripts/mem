@@ -1,0 +1,11 @@
+#!/bin/bash
+used=$(free | awk '/Mem:/ {printf "%.0f", $3/$2 * 100}')
+echo "󰍛 $used%"
+
+if [ "$used" -gt 85 ]; then
+  echo "#FF0000"  # merah
+elif [ "$used" -gt 60 ]; then
+  echo "#FFA500"  # oranye
+else
+  echo "#00FF00"  # hijau
+fi

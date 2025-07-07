@@ -1,0 +1,8 @@
+#!/bin/bash
+vol=$(amixer get Master | grep -o "[0-9]*%" | head -1)
+mute=$(amixer get Master | grep '\[off\]')
+if [ -n "$mute" ]; then 
+  echo "󰖁 $vol"
+else
+  echo " $vol"
+fi
