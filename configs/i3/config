@@ -4,8 +4,11 @@ set $mod Mod4
 font pango:CascadiaCode NF 10
 
 # Autostart apps
-exec_always --no-startup-id picom --config ~/.config/picom.conf
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always killall polybar
+exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id feh --bg-fill ~/Pictures/pixel-city.png
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -72,8 +75,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Floating toggle
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+t floating toggle
+bindsym $mod+t focus mode_toggle
+
+bindsym $mod+space exec rofi -show drun
 
 # Focus parent/child
 bindsym $mod+a focus parent
@@ -145,16 +150,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # i3bar with i3blocks
-bar {
-    status_command i3blocks
-    font pango:CascadiaCode NF 10
-    colors {
-        background #1e1e2e
-        statusline #ffffff
-        separator  #44475a
-        focused_workspace  #61afef #61afef #282c34
-        inactive_workspace #3e4451 #3e4451 #abb2bf
-        urgent_workspace   #e06c75 #e06c75 #282c34
-    }
-}
-
+# bar {
+#     status_command i3blocks
+#     font pango:CascadiaCode NF 10
+#     colors {
+#         background #1e1e2e
+#         statusline #ffffff
+#         separator  #44475a
+#         focused_workspace  #61afef #61afef #282c34
+#         inactive_workspace #3e4451 #3e4451 #abb2bf
+#         urgent_workspace   #e06c75 #e06c75 #282c34
+#     }
+# }
