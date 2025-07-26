@@ -25,6 +25,9 @@ set $down k
 set $left j
 set $right semicolon
 
+# screenshot
+bindsym Print exec flameshot gui
+
 # Mouse floating window drag
 floating_modifier $mod
 tiling_drag modifier titlebar

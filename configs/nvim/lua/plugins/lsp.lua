@@ -14,9 +14,20 @@ return {
 				"html",
 				"cssls",
         "rust_analyzer",
+        "volar",
+        "svelte",
 			},
 		})
 		local lspconfig = require("lspconfig")
+
+		-- Tampilkan diagnostic sebagai virtual text (inline)
+		vim.diagnostic.config({
+			virtual_text = true,
+			signs = true,
+			underline = true,
+			update_in_insert = false,
+			severity_sort = true,
+		})
 		lspconfig.ts_ls.setup({})
 		lspconfig.eslint.setup({})
 		lspconfig.lua_ls.setup({
@@ -24,5 +35,7 @@ return {
 				Lua = { diagnostics = { globals = { "vim" } } },
 			},
 		})
+		lspconfig.volar.setup({})
+		lspconfig.svelte.setup({})
 	end,
 }

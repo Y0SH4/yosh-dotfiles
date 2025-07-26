@@ -23,3 +23,15 @@ keymap("n", "K", vim.lsp.buf.hover, opts)
 keymap("n", "gi", vim.lsp.buf.implementation, opts)
 keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
 keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+-- Formatting
+keymap("n", "<leader>f", function() require("conform").format({ async = true, lsp_fallback = true }) end, opts)
+
+-- Insert mode: 'jj' or 'jk' to escape
+keymap("i", "jj", "<Esc>", opts)
+keymap("i", "jk", "<Esc>", opts)
+
+keymap("n", "<leader>d", vim.diagnostic.open_float, opts)
+keymap("n", "[d", vim.diagnostic.goto_prev, opts)
+keymap("n", "]d", vim.diagnostic.goto_next, opts)
+keymap("n", "<leader>q", vim.diagnostic.setloclist, opts)
