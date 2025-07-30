@@ -1,7 +1,7 @@
 # i3 config - versi bersih, pakai $mod = Windows key
 
 set $mod Mod4
-font pango:CascadiaCode NF 10
+font pango:Cascadia Code NF 10
 
 # Autostart apps
 exec_always killall polybar
@@ -27,6 +27,7 @@ set $right semicolon
 
 # screenshot
 bindsym Print exec flameshot gui
+bindsym Ctrl+Shift+Print exec "flameshot gui --raw | xclip -sel clip -t image/png"
 
 # Mouse floating window drag
 floating_modifier $mod

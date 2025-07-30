@@ -4,6 +4,8 @@ local opts = { noremap = true, silent = true }
 -- Basic
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)      -- Ctrl+S to save
+keymap("i", "<C-s>", "<Esc>:w<CR>", opts) -- Ctrl+S to save in insert mode
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<Esc>", ":nohlsearch<CR>", opts)
 
@@ -31,6 +33,7 @@ keymap("n", "<leader>f", function() require("conform").format({ async = true, ls
 keymap("i", "jj", "<Esc>", opts)
 keymap("i", "jk", "<Esc>", opts)
 
+-- Diagnostics
 keymap("n", "<leader>d", vim.diagnostic.open_float, opts)
 keymap("n", "[d", vim.diagnostic.goto_prev, opts)
 keymap("n", "]d", vim.diagnostic.goto_next, opts)
