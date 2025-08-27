@@ -1,7 +1,7 @@
 # i3 config - versi bersih, pakai $mod = Windows key
 
 set $mod Mod4
-font pango:Cascadia Code NF 10
+font pango:JetBrainsMono Nerd Font 10
 
 # Autostart apps
 exec_always killall polybar
