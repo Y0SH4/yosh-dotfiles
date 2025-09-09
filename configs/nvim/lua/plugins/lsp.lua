@@ -15,6 +15,9 @@ return {
         "cssls",
         "rust_analyzer",
         "svelte",
+        "shellcheck",
+        "shfmt",
+        "tailwindcss-language-server",
       },
     })
     local lspconfig = require("lspconfig")

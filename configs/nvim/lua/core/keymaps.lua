@@ -9,6 +9,7 @@ keymap("i", "<C-s>", "<Esc>:w<CR>", opts) -- Ctrl+S to save in insert mode
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<Esc>", ":nohlsearch<CR>", opts)
 
+
 -- File Explorer Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
