@@ -17,7 +17,6 @@ return {
         "svelte",
         "shellcheck",
         "shfmt",
-        "tailwindcss-language-server",
       },
     })
     local lspconfig = require("lspconfig")
