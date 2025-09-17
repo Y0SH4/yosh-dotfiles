@@ -15,8 +15,6 @@ return {
         "cssls",
         "rust_analyzer",
         "svelte",
-        "shellcheck",
-        "shfmt",
       },
     })
     local lspconfig = require("lspconfig")

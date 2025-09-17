@@ -30,6 +30,30 @@ keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 -- Formatting
 keymap("n", "<leader>f", function() require("conform").format({ async = true, lsp_fallback = true }) end, opts)
 
+-- Clipboard operations
+keymap("v", "<leader>y", '"+y', opts)     -- Copy to system clipboard in visual mode
+keymap("n", "<leader>Y", '"+yy', opts)    -- Copy line to system clipboard
+keymap("n", "<leader>p", '"+p', opts)     -- Paste from system clipboard after cursor
+keymap("n", "<leader>P", '"+P', opts)     -- Paste from system clipboard before cursor
+keymap("v", "<leader>p", '"+p', opts)     -- Paste from system clipboard in visual mode
+
+-- Buffer/Tab navigation
+keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)       -- Previous buffer
+keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)       -- Next buffer
+keymap("n", "<leader>c", ":bd<CR>", opts)                    -- Close current buffer
+keymap("n", "<leader>bo", ":BufferLineCloseOthers<CR>", opts) -- Close other buffers
+keymap("n", "<leader>br", ":BufferLineCloseRight<CR>", opts)  -- Close buffers to the right
+keymap("n", "<leader>bl", ":BufferLineCloseLeft<CR>", opts)   -- Close buffers to the left
+keymap("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>", opts)
+keymap("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>", opts)
+keymap("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>", opts)
+keymap("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>", opts)
+keymap("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>", opts)
+keymap("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>", opts)
+keymap("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>", opts)
+keymap("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>", opts)
+
 -- Insert mode: 'jj' or 'jk' to escape
 keymap("i", "jj", "<Esc>", opts)
 keymap("i", "jk", "<Esc>", opts)
