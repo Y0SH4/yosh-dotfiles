@@ -31,6 +31,9 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 # dunst notifications
 exec --no-startup-id dunst
 
+# Nvidia Setup
+exec --no-startup-id nvidia-settings --load-config-only
+
 # ============================================================================
 # WINDOW APPEARANCE
 # ============================================================================
@@ -180,7 +183,7 @@ bindsym $mod+Shift+w exec rofi-wifi-menu.sh
 
 # Screenshots
 bindsym Print exec flameshot gui
-bindsym Ctrl+Shift+Print exec "flameshot gui --raw | xclip -sel clip -t image/$(date).png"
+bindsym Ctrl+Shift+Print exec "flameshot gui --raw | xclip -sel clip -t image/png"
 
 # ============================================================================
 # SYSTEM CONTROLS
