@@ -23,6 +23,7 @@ exec --no-startup-id nm-applet
 
 # Compositor and visual effects
 exec --no-startup-id picom
+exec_always --no-startup-id feh --bg-fill ~/Pictures/pixel-city.png
 
 # Status bar
 exec_always killall polybar
