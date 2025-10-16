@@ -1,29 +1,39 @@
 return {
-  "hrsh7th/nvim-cmp",
-  dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "L3MON4D3/LuaSnip",
-    "rafamadriz/friendly-snippets",
-  },
-  config = function()
-    local cmp = require("cmp")
-    cmp.setup({
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end
-      },
-      mapping = cmp.mapping.preset.insert({
-        ["<C-Space>"] = cmp.mapping.complete(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
-      }),
-      sources = cmp.config.sources({
-        { name = "nvim_lsp" },
-        { name = "buffer" },
-        { name = "path" },
-      })
-    })
-  end
+    {
+        "saghen/blink.cmp",
+        lazy = false, -- lazy loading handled internally
+        dependencies = "rafamadriz/friendly-snippets",
+        version = "v0.*",
+        opts = {
+            keymap = { preset = "default" },
+            appearance = {
+                use_nvim_cmp_as_default = true,
+                nerd_font_variant = "mono"
+            },
+            sources = {
+                default = { "lsp", "path", "snippets", "buffer" },
+            },
+            completion = {
+                accept = {
+                    auto_brackets = {
+                        enabled = true,
+                    },
+                },
+                menu = {
+                    draw = {
+                        treesitter = { "lsp" },
+                    },
+                },
+                documentation = {
+                    auto_show = true,
+                    auto_show_delay_ms = 200,
+                },
+                ghost_text = {
+                    enabled = true,
+                },
+            },
+            signature = { enabled = true }
+        },
+        opts_extend = { "sources.default" }
+    }
 }

@@ -56,10 +56,4 @@ return {
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end
 	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	},
 }

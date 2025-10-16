@@ -16,22 +16,40 @@ return {
     require("conform").setup({
       -- Define formatters
       formatters_by_ft = {
-        lua = { "stylua" },
-        javascript = { "eslint", "prettier" },
-        typescript = { "eslint", "prettier" },
-        javascriptreact = { "eslint", "prettier" },
-        typescriptreact = { "eslint", "prettier" },
-        json = { "prettier" },
-        jsonc = { "prettier" },
+        -- Web Development
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        svelte = { "prettier" },
+        astro = { "prettier" },
+        
+        -- Markup & Styling
         html = { "prettier" },
         css = { "prettier" },
         scss = { "prettier" },
+        sass = { "prettier" },
+        less = { "prettier" },
+        
+        -- Data & Config
+        json = { "prettier" },
+        jsonc = { "prettier" },
+        yaml = { "prettier" },
+        toml = { "taplo" },
+        
+        -- Markdown
+        markdown = { "prettier" },
+        mdx = { "prettier" },
+        
+        -- GraphQL
+        graphql = { "prettier" },
+        
+        -- Other Languages
+        lua = { "stylua" },
         rust = { "rustfmt" },
         python = { "black" },
-        go = { "gofmt" },
+        go = { "gofmt", "goimports" },
         sh = { "shfmt" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
       },
       -- Set up format-on-save for *.{js,jsx,ts,tsx,json,lua,rust,py,go} files
       format_on_save = function(bufnr)
@@ -43,16 +61,17 @@ return {
       end,
       -- Customize formatters
       formatters = {
+        prettier = {
+          prepend_args = { 
+            "--print-width", "100",
+            "--tab-width", "2",
+            "--single-quote",
+            "--trailing-comma", "es5",
+            "--semi",
+          },
+        },
         shfmt = {
           prepend_args = { "-i", "2", "-ci" },
-        },
-        prettier = {
-          prepend_args = { "--print-width", "100", "--tab-width", "2" },
-        },
-        eslint = {
-          command = "eslint",
-          args = { "--fix", "--stdin", "--stdin-filename", "$FILENAME" },
-          stdin = true,
         },
       },
     })

@@ -6,8 +6,12 @@ return {
 	require("plugins.telescope"),
 	require("plugins.git"),
 	require("plugins.formatter"),
+	require("plugins.linting"),
+	require("plugins.debug"),
 	require("plugins.explorer"),
 	require("plugins.whichkey"),
 	require("plugins.comment"),
-  require("plugins.editor"),
+	require("plugins.editor"),
+	require("plugins.webdev"),
+	require("plugins.mason-tools"),
 }
