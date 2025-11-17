@@ -65,7 +65,6 @@ return {
           prepend_args = { 
             "--print-width", "100",
             "--tab-width", "2",
-            "--single-quote",
             "--trailing-comma", "es5",
             "--semi",
           },
