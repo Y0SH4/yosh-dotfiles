@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+idir="$HOME/.config/i3"
+
+export XDG_CURRENT_DESKTOP='i3'
+
+_ps=(xsettingsd ksuperkey)
+for _prs in "${_ps[@]}"; do
+	if [[ `pidof ${_prs}` ]]; then
+		killall -9 ${_prs}
+	fi
+done
+
+xsettingsd --config="$idir"/xsettingsd &
+
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+xfce4-power-manager &
+
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+xsetroot -cursor_name left_ptr
+
+hsetroot -cover "$idir"/theme/wallpaper
+
+"$idir"/scripts/i3_dunst
+
+"$idir"/scripts/i3_bar
+
+"$idir"/scripts/i3_comp
+
+exec mpd &

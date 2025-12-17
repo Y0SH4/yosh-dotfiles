@@ -11,4 +11,3 @@ next_ws=$((($current_ws % $total_ws) + 1))
 
 # Switch to the next workspace
 i3-msg workspace number $next_ws
-
