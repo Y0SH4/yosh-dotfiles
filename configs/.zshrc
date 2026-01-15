@@ -1,38 +1,71 @@
-export ZSH="$HOME/.oh-my-zsh"
+# =====================
+# ZSH BASIC
+# =====================
+export ZSH="$HOME/.zsh"
+export EDITOR=nvim
+export TERMINAL=gnome-terminal
+
+# =====================
+# HISTORY
+# =====================
+HISTSIZE=10000
+SAVEHIST=10000
+setopt share_history
+setopt hist_ignore_dups
+setopt hist_ignore_space
+
+# =====================
+# AUTOCOMPLETE
+# =====================
+autoload -Uz compinit
+compinit
+eval "$(zoxide init zsh)"
+# eval "$(fnm env --use-on-cd)"
+
+# =====================
+# PLUGINS (FAST)
+# =====================
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# =====================
+# STARSHIP PROMPT
+# =====================
 eval "$(starship init zsh)"
 
-plugins=(
-  fzf
-  git
-  history-substring-search
-  colored-man-pages
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-z
-)
+# =====================
+# ALIASES (DEV FRIENDLY)
+# =====================
+# alias ll='ls -lah'
+alias cat='batcat'
+alias ls='lsd'
+alias cd='z'
 
-source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias ls="lsd"
-alias cat="bat"
+# =====================
+# NODE / BUN
+# =====================
+# export PATH="$HOME/.bun/bin:$PATH"
 
-# export ANDROID_HOME=$HOME/Android
-# export ANDROID_SDK_ROOT=$HOME/Android
-# export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
 
-export ANDROID_HOME=$HOME/Android
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# =====================
+# ANDROID SETUP
+# =====================
+# =====================
+# ANDROID SETUP
+# =====================
+# Android SDK
+export ANDROID_HOME=/usr/lib/android-sdk
+export ANDROID_SDK_ROOT=/usr/lib/android-sdk
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
-# bun completions
-[ -s "/home/bangyosh/.bun/_bun" ] && source "/home/bangyosh/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# fnm
+FNM_PATH="/home/kernelcraft/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
