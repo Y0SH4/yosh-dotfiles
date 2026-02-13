@@ -49,6 +49,7 @@ alias cd='z'
 # =====================
 # ANDROID SETUP
 # =====================
+<<<<<<< Updated upstream
 export ANDROID_HOME=/usr/lib/android-sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 
@@ -67,6 +68,14 @@ if [ -d "$ANDROID_HOME/emulator" ]; then
   export PATH="$ANDROID_HOME/emulator:$PATH"
 fi
 
+=======
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+>>>>>>> Stashed changes
 
 # fnm
 FNM_PATH="/home/kernelcraft/.local/share/fnm"
