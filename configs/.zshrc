@@ -41,26 +41,31 @@ alias cat='batcat'
 alias ls='lsd'
 alias cd='z'
 
-
 # =====================
 # NODE / BUN
 # =====================
 # export PATH="$HOME/.bun/bin:$PATH"
 
-
 # =====================
 # ANDROID SETUP
 # =====================
-# =====================
-# ANDROID SETUP
-# =====================
-# Android SDK
 export ANDROID_HOME=/usr/lib/android-sdk
-export ANDROID_SDK_ROOT=/usr/lib/android-sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools/bin
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+
+# Android CLI tools
+if [ -d "$ANDROID_HOME/cmdline-tools/latest" ]; then
+  export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+fi
+
+# Platform tools (adb, fastboot)
+if [ -d "$ANDROID_HOME/platform-tools" ]; then
+  export PATH="$ANDROID_HOME/platform-tools:$PATH"
+fi
+
+# Emulator (optional)
+if [ -d "$ANDROID_HOME/emulator" ]; then
+  export PATH="$ANDROID_HOME/emulator:$PATH"
+fi
 
 
 # fnm
@@ -69,3 +74,4 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+export PATH=$HOME/.local/bin:$PATH
