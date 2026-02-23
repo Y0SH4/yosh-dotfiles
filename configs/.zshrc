@@ -37,7 +37,7 @@ eval "$(starship init zsh)"
 # ALIASES (DEV FRIENDLY)
 # =====================
 # alias ll='ls -lah'
-alias cat='batcat'
+alias cat='bat'
 alias ls='lsd'
 alias cd='z'
 
@@ -69,9 +69,8 @@ fi
 
 
 # fnm
-FNM_PATH="/home/kernelcraft/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
+  eval "$(fnm env --use-on-cd --shell zsh)"
 fi
-export PATH=$HOME/.local/bin:$PATH

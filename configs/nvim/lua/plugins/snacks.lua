@@ -6,9 +6,18 @@ return {
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-    -- Configure file explorer to show hidden files by default
+    -- Enhanced explorer configuration with OneDark styling
     explorer = {
-      show_hidden = true, -- Show hidden files (dotfiles) by default
+      enabled = true,
+      show_hidden = true,
+      indent = {
+        guides = "│ ",
+      },
+      icons = {
+        folder_open = "󰉋",
+        folder = "󰉋",
+        file = "󰈙",
+      },
     },
   },
 }
