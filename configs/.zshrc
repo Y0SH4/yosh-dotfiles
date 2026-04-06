@@ -19,8 +19,6 @@ setopt hist_ignore_space
 # =====================
 autoload -Uz compinit
 compinit
-eval "$(zoxide init zsh)"
-# eval "$(fnm env --use-on-cd)"
 
 # =====================
 # PLUGINS (FAST)
@@ -34,43 +32,34 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
 
 # =====================
-# ALIASES (DEV FRIENDLY)
+# ALIASES
 # =====================
-# alias ll='ls -lah'
 alias cat='bat'
-alias ls='lsd'
-alias cd='z'
+alias ll='ls -lah'
 
 # =====================
-# NODE / BUN
+# ANDROID SETUP (PORTABLE)
 # =====================
-# export PATH="$HOME/.bun/bin:$PATH"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+
+# Add Android tools to PATH safely
+[ -d "$ANDROID_HOME/cmdline-tools/latest/bin" ] && export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+[ -d "$ANDROID_HOME/platform-tools" ] && export PATH="$ANDROID_HOME/platform-tools:$PATH"
+[ -d "$ANDROID_HOME/emulator" ] && export PATH="$ANDROID_HOME/emulator:$PATH"
 
 # =====================
-# ANDROID SETUP
+# FNM (NODE VERSION MANAGER)
 # =====================
-export ANDROID_HOME=/usr/lib/android-sdk
-export ANDROID_SDK_ROOT=$ANDROID_HOME
-
-# Android CLI tools
-if [ -d "$ANDROID_HOME/cmdline-tools/latest" ]; then
-  export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
-fi
-
-# Platform tools (adb, fastboot)
-if [ -d "$ANDROID_HOME/platform-tools" ]; then
-  export PATH="$ANDROID_HOME/platform-tools:$PATH"
-fi
-
-# Emulator (optional)
-if [ -d "$ANDROID_HOME/emulator" ]; then
-  export PATH="$ANDROID_HOME/emulator:$PATH"
-fi
-
-
-# fnm
 FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env --use-on-cd --shell zsh)"
 fi
+
+# =====================
+# OPTIONAL DEV ALIASES
+# =====================
+alias adb-restart='adb kill-server && adb start-server'
+alias adb-devices='adb devices'export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
